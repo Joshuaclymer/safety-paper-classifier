@@ -1,0 +1,701 @@
+title,abstract
+Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples,"We identify obfuscated gradients, a kind of gradient masking, as a phenomenon
+that leads to a false sense of security in defenses against adversarial
+examples. While defenses that cause obfuscated gradients appear to defeat
+iterative optimization-based attacks, we find defenses relying on this effect
+can be circumvented. We describe characteristic behaviors of defenses
+exhibiting the effect, and for each of the three types of obfuscated gradients
+we discover, we develop attack techniques to overcome it. In a case study,
+examining non-certified white-box-secure defenses at ICLR 2018, we find
+obfuscated gradients are a common occurrence, with 7 of 9 defenses relying on
+obfuscated gradients. Our new attacks successfully circumvent 6 completely, and
+1 partially, in the original threat model each paper considers."
+Universal Adversarial Triggers for Attacking and Analyzing NLP,"Adversarial examples highlight model vulnerabilities and are useful for
+evaluation and interpretation. We define universal adversarial triggers:
+input-agnostic sequences of tokens that trigger a model to produce a specific
+prediction when concatenated to any input from a dataset. We propose a
+gradient-guided search over tokens which finds short trigger sequences (e.g.,
+one word for classification and four words for language modeling) that
+successfully trigger the target prediction. For example, triggers cause SNLI
+entailment accuracy to drop from 89.94% to 0.55%, 72% of ""why"" questions in
+SQuAD to be answered ""to kill american people"", and the GPT-2 language model to
+spew racist output even when conditioned on non-racial contexts. Furthermore,
+although the triggers are optimized using white-box access to a specific model,
+they transfer to other models for all tasks we consider. Finally, since
+triggers are input-agnostic, they provide an analysis of global model behavior.
+For instance, they confirm that SNLI models exploit dataset biases and help to
+diagnose heuristics learned by reading comprehension models."
+Adversarial Examples for Evaluating Reading Comprehension Systems,"Standard accuracy metrics indicate that reading comprehension systems are
+making rapid progress, but the extent to which these systems truly understand
+language remains unclear. To reward systems with real language understanding
+abilities, we propose an adversarial evaluation scheme for the Stanford
+Question Answering Dataset (SQuAD). Our method tests whether systems can answer
+questions about paragraphs that contain adversarially inserted sentences, which
+are automatically generated to distract computer systems without changing the
+correct answer or misleading humans. In this adversarial setting, the accuracy
+of sixteen published models drops from an average of $75\%$ F1 score to $36\%$;
+when the adversary is allowed to add ungrammatical sequences of words, average
+accuracy on four models decreases further to $7\%$. We hope our insights will
+motivate the development of new models that understand language more precisely."
+Data Augmentation Can Improve Robustness,"Adversarial training suffers from robust overfitting, a phenomenon where the
+robust test accuracy starts to decrease during training. In this paper, we
+focus on reducing robust overfitting by using common data augmentation schemes.
+We demonstrate that, contrary to previous findings, when combined with model
+weight averaging, data augmentation can significantly boost robust accuracy.
+Furthermore, we compare various augmentations techniques and observe that
+spatial composition techniques work the best for adversarial training. Finally,
+we evaluate our approach on CIFAR-10 against $\ell_\infty$ and $\ell_2$
+norm-bounded perturbations of size $\epsilon = 8/255$ and $\epsilon = 128/255$,
+respectively. We show large absolute improvements of +2.93% and +2.16% in
+robust accuracy compared to previous state-of-the-art methods. In particular,
+against $\ell_\infty$ norm-bounded perturbations of size $\epsilon = 8/255$,
+our model reaches 60.07% robust accuracy without using any external data. We
+also achieve a significant performance boost with this approach while using
+other architectures and datasets such as CIFAR-100, SVHN and TinyImageNet."
+Adversarial Examples for Evaluating Reading Comprehension Systems,"Standard accuracy metrics indicate that reading comprehension systems are
+making rapid progress, but the extent to which these systems truly understand
+language remains unclear. To reward systems with real language understanding
+abilities, we propose an adversarial evaluation scheme for the Stanford
+Question Answering Dataset (SQuAD). Our method tests whether systems can answer
+questions about paragraphs that contain adversarially inserted sentences, which
+are automatically generated to distract computer systems without changing the
+correct answer or misleading humans. In this adversarial setting, the accuracy
+of sixteen published models drops from an average of $75\%$ F1 score to $36\%$;
+when the adversary is allowed to add ungrammatical sequences of words, average
+accuracy on four models decreases further to $7\%$. We hope our insights will
+motivate the development of new models that understand language more precisely."
+Towards Deep Learning Models Resistant to Adversarial Attacks,"Recent work has demonstrated that deep neural networks are vulnerable to
+adversarial examples---inputs that are almost indistinguishable from natural
+data and yet classified incorrectly by the network. In fact, some of the latest
+findings suggest that the existence of adversarial attacks may be an inherent
+weakness of deep learning models. To address this problem, we study the
+adversarial robustness of neural networks through the lens of robust
+optimization. This approach provides us with a broad and unifying view on much
+of the prior work on this topic. Its principled nature also enables us to
+identify methods for both training and attacking neural networks that are
+reliable and, in a certain sense, universal. In particular, they specify a
+concrete security guarantee that would protect against any adversary. These
+methods let us train networks with significantly improved resistance to a wide
+range of adversarial attacks. They also suggest the notion of security against
+a first-order adversary as a natural and broad security guarantee. We believe
+that robustness against such well-defined classes of adversaries is an
+important stepping stone towards fully resistant deep learning models. Code and
+pre-trained models are available at"
+BERT-ATTACK: Adversarial Attack Against BERT Using BERT,"Adversarial attacks for discrete data (such as texts) have been proved
+significantly more challenging than continuous data (such as images) since it
+is difficult to generate adversarial samples with gradient-based methods.
+Current successful attack methods for texts usually adopt heuristic replacement
+strategies on the character or word level, which remains challenging to find
+the optimal solution in the massive space of possible combinations of
+replacements while preserving semantic consistency and language fluency. In
+this paper, we propose \textbf{BERT-Attack}, a high-quality and effective
+method to generate adversarial samples using pre-trained masked language models
+exemplified by BERT. We turn BERT against its fine-tuned models and other deep
+neural models in downstream tasks so that we can successfully mislead the
+target models to predict incorrectly. Our method outperforms state-of-the-art
+attack strategies in both success rate and perturb percentage, while the
+generated adversarial samples are fluent and semantically preserved. Also, the
+cost of calculation is low, thus possible for large-scale generations. The code
+is available at"
+Gradient-based Adversarial Attacks against Text Transformers,"We propose the first general-purpose gradient-based attack against
+transformer models. Instead of searching for a single adversarial example, we
+search for a distribution of adversarial examples parameterized by a
+continuous-valued matrix, hence enabling gradient-based optimization. We
+empirically demonstrate that our white-box attack attains state-of-the-art
+attack performance on a variety of natural language tasks. Furthermore, we show
+that a powerful black-box transfer attack, enabled by sampling from the
+adversarial distribution, matches or exceeds existing methods, while only
+requiring hard-label outputs."
+Smooth Adversarial Training,"It is commonly believed that networks cannot be both accurate and robust,
+that gaining robustness means losing accuracy. It is also generally believed
+that, unless making networks larger, network architectural elements would
+otherwise matter little in improving adversarial robustness. Here we present
+evidence to challenge these common beliefs by a careful study about adversarial
+training. Our key observation is that the widely-used ReLU activation function
+significantly weakens adversarial training due to its non-smooth nature. Hence
+we propose smooth adversarial training (SAT), in which we replace ReLU with its
+smooth approximations to strengthen adversarial training. The purpose of smooth
+activation functions in SAT is to allow it to find harder adversarial examples
+and compute better gradient updates during adversarial training."
+Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks,"The field of defense strategies against adversarial attacks has significantly
+grown over the last years, but progress is hampered as the evaluation of
+adversarial defenses is often insufficient and thus gives a wrong impression of
+robustness. Many promising defenses could be broken later on, making it
+difficult to identify the state-of-the-art. Frequent pitfalls in the evaluation
+are improper tuning of hyperparameters of the attacks, gradient obfuscation or
+masking. In this paper we first propose two extensions of the PGD-attack
+overcoming failures due to suboptimal step size and problems of the objective
+function. We then combine our novel attacks with two complementary existing
+ones to form a parameter-free, computationally affordable and user-independent
+ensemble of attacks to test adversarial robustness. We apply our ensemble to
+over 50 models from papers published at recent top machine learning and
+computer vision venues. In all except one of the cases we achieve lower robust
+test accuracy than reported in these papers, often by more than $10\%$,
+identifying several broken defenses."
+Benchmarking Neural Network Robustness to Common Corruptions and Perturbations,"In this paper we establish rigorous benchmarks for image classifier
+robustness. Our first benchmark, ImageNet-C, standardizes and expands the
+corruption robustness topic, while showing which classifiers are preferable in
+safety-critical applications. Then we propose a new dataset called ImageNet-P
+which enables researchers to benchmark a classifier's robustness to common
+perturbations. Unlike recent robustness research, this benchmark evaluates
+performance on common corruptions and perturbations not worst-case adversarial
+perturbations. We find that there are negligible changes in relative corruption
+robustness from AlexNet classifiers to ResNet classifiers. Afterward we
+discover ways to enhance corruption and perturbation robustness. We even find
+that a bypassed adversarial defense provides substantial common perturbation
+robustness. Together our benchmarks may aid future work toward networks that
+robustly generalize."
+The Many Faces of Robustness: A Critical Analysis of Out-of-Distribution Generalization,"We introduce four new real-world distribution shift datasets consisting of
+changes in image style, image blurriness, geographic location, camera
+operation, and more. With our new datasets, we take stock of previously
+proposed methods for improving out-of-distribution robustness and put them to
+the test. We find that using larger models and artificial data augmentations
+can improve robustness on real-world distribution shifts, contrary to claims in
+prior work. We find improvements in artificial robustness benchmarks can
+transfer to real-world distribution shifts, contrary to claims in prior work.
+Motivated by our observation that data augmentations can help with real-world
+distribution shifts, we also introduce a new data augmentation method which
+advances the state-of-the-art and outperforms models pretrained with 1000 times
+more labeled data. Overall we find that some methods consistently help with
+distribution shifts in texture and local image statistics, but these methods do
+not help with some other distribution shifts like geographic changes. Our
+results show that future research must study multiple distribution shifts
+simultaneously, as we demonstrate that no evaluated method consistently
+improves robustness."
+Reliable evaluation of adversarial robustness with an ensemble of diverse parameter-free attacks,"The field of defense strategies against adversarial attacks has significantly
+grown over the last years, but progress is hampered as the evaluation of
+adversarial defenses is often insufficient and thus gives a wrong impression of
+robustness. Many promising defenses could be broken later on, making it
+difficult to identify the state-of-the-art. Frequent pitfalls in the evaluation
+are improper tuning of hyperparameters of the attacks, gradient obfuscation or
+masking. In this paper we first propose two extensions of the PGD-attack
+overcoming failures due to suboptimal step size and problems of the objective
+function. We then combine our novel attacks with two complementary existing
+ones to form a parameter-free, computationally affordable and user-independent
+ensemble of attacks to test adversarial robustness. We apply our ensemble to
+over 50 models from papers published at recent top machine learning and
+computer vision venues. In all except one of the cases we achieve lower robust
+test accuracy than reported in these papers, often by more than $10\%$,
+identifying several broken defenses."
+Using Pre-Training Can Improve Model Robustness and Uncertainty,"He et al. (2018) have called into question the utility of pre-training by
+showing that training from scratch can often yield similar performance to
+pre-training. We show that although pre-training may not improve performance on
+traditional classification metrics, it improves model robustness and
+uncertainty estimates. Through extensive experiments on adversarial examples,
+label corruption, class imbalance, out-of-distribution detection, and
+confidence calibration, we demonstrate large gains from pre-training and
+complementary effects with task-specific methods. We introduce adversarial
+pre-training and show approximately a 10% absolute improvement over the
+previous state-of-the-art in adversarial robustness. In some cases, using
+pre-training without task-specific methods also surpasses the state-of-the-art,
+highlighting the need for pre-training when evaluating future methods on
+robustness and uncertainty tasks."
+Motivating the Rules of the Game for Adversarial Example Research,"Advances in machine learning have led to broad deployment of systems with
+impressive performance on important problems. Nonetheless, these systems can be
+induced to make errors on data that are surprisingly similar to examples the
+learned system handles correctly. The existence of these errors raises a
+variety of questions about out-of-sample generalization and whether bad actors
+might use such examples to abuse deployed systems. As a result of these
+security concerns, there has been a flurry of recent papers proposing
+algorithms to defend against such malicious perturbations of correctly handled
+examples. It is unclear how such misclassifications represent a different kind
+of security problem than other errors, or even other attacker-produced examples
+that have no specific relationship to an uncorrupted input. In this paper, we
+argue that adversarial example defense papers have, to date, mostly considered
+abstract, toy games that do not relate to any specific security concern.
+Furthermore, defense papers have not yet precisely described all the abilities
+and limitations of attackers that would be relevant in practical security.
+Towards this end, we establish a taxonomy of motivations, constraints, and
+abilities for more plausible adversaries. Finally, we provide a series of
+recommendations outlining a path forward for future work to more clearly
+articulate the threat model and perform more meaningful evaluation."
+Towards Evaluating the Robustness of Neural Networks,"Neural networks provide state-of-the-art results for most machine learning
+tasks. Unfortunately, neural networks are vulnerable to adversarial examples:
+given an input $x$ and any target classification $t$, it is possible to find a
+new input $x'$ that is similar to $x$ but classified as $t$. This makes it
+difficult to apply neural networks in security-critical areas. Defensive
+distillation is a recently proposed approach that can take an arbitrary neural
+network, and increase its robustness, reducing the success rate of current
+attacks' ability to find adversarial examples from $95\%$ to $0.5\%$."
+Certified Defenses against Adversarial Examples,"While neural networks have achieved high accuracy on standard image
+classification benchmarks, their accuracy drops to nearly zero in the presence
+of small adversarial perturbations to test inputs. Defenses based on
+regularization and adversarial training have been proposed, but often followed
+by new, stronger attacks that defeat these defenses. Can we somehow end this
+arms race? In this work, we study this problem for neural networks with one
+hidden layer. We first propose a method based on a semidefinite relaxation that
+outputs a certificate that for a given network and test input, no attack can
+force the error to exceed a certain value. Second, as this certificate is
+differentiable, we jointly optimize it with the network parameters, providing
+an adaptive regularizer that encourages robustness against all attacks. On
+MNIST, our approach produces a network and a certificate that no attack that
+perturbs each pixel by at most \epsilon = 0.1 can cause more than 35% test
+error."
+PixMix: Dreamlike Pictures Comprehensively Improve Safety Measures,"In real-world applications of machine learning, reliable and safe systems
+must consider measures of performance beyond standard test set accuracy. These
+other goals include out-of-distribution (OOD) robustness, prediction
+consistency, resilience to adversaries, calibrated uncertainty estimates, and
+the ability to detect anomalous inputs. However, improving performance towards
+these goals is often a balancing act that today's methods cannot achieve
+without sacrificing performance on other safety axes. For instance, adversarial
+training improves adversarial robustness but sharply degrades other classifier
+performance metrics. Similarly, strong data augmentation and regularization
+techniques often improve OOD robustness but harm anomaly detection, raising the
+question of whether a Pareto improvement on all existing safety measures is
+possible. To meet this challenge, we design a new data augmentation strategy
+utilizing the natural structural complexity of pictures such as fractals, which
+outperforms numerous baselines, is near Pareto-optimal, and roundly improves
+safety measures."
+Adversarial NLI: A New Benchmark for Natural Language Understanding,"We introduce a new large-scale NLI benchmark dataset, collected via an
+iterative, adversarial human-and-model-in-the-loop procedure. We show that
+training models on this new dataset leads to state-of-the-art performance on a
+variety of popular NLI benchmarks, while posing a more difficult challenge with
+its new test set. Our analysis sheds light on the shortcomings of current
+state-of-the-art models, and shows that non-expert annotators are successful at
+finding their weaknesses. The data collection method can be applied in a
+never-ending learning scenario, becoming a moving target for NLU, rather than a
+static benchmark that will quickly saturate."
+Augmenting Softmax Information for Selective Classification with Out-of-Distribution Data,"Detecting out-of-distribution (OOD) data is a task that is receiving an
+increasing amount of research attention in the domain of deep learning for
+computer vision. However, the performance of detection methods is generally
+evaluated on the task in isolation, rather than also considering potential
+downstream tasks in tandem. In this work, we examine selective classification
+in the presence of OOD data (SCOD). That is to say, the motivation for
+detecting OOD samples is to reject them so their impact on the quality of
+predictions is reduced. We show under this task specification, that existing
+post-hoc methods perform quite differently compared to when evaluated only on
+OOD detection. This is because it is no longer an issue to conflate
+in-distribution (ID) data with OOD data if the ID data is going to be
+misclassified. However, the conflation within ID data of correct and incorrect
+predictions becomes undesirable. We also propose a novel method for SCOD,
+Softmax Information Retaining Combination (SIRC), that augments softmax-based
+confidence scores with feature-agnostic information such that their ability to
+identify OOD samples is improved without sacrificing separation between correct
+and incorrect ID predictions. Experiments on a wide variety of ImageNet-scale
+datasets and convolutional neural network architectures show that SIRC is able
+to consistently match or outperform the baseline for SCOD, whilst existing OOD
+detection methods fail to do so."
+Models Out of Line: A Fourier Lens on Distribution Shift Robustness,"Improving the accuracy of deep neural networks (DNNs) on out-of-distribution
+(OOD) data is critical to an acceptance of deep learning (DL) in real world
+applications. It has been observed that accuracies on in-distribution (ID)
+versus OOD data follow a linear trend and models that outperform this baseline
+are exceptionally rare (and referred to as ""effectively robust""). Recently,
+some promising approaches have been developed to improve OOD robustness: model
+pruning, data augmentation, and ensembling or zero-shot evaluating large
+pretrained models. However, there still is no clear understanding of the
+conditions on OOD data and model properties that are required to observe
+effective robustness. We approach this issue by conducting a comprehensive
+empirical study of diverse approaches that are known to impact OOD robustness
+on a broad range of natural and synthetic distribution shifts of CIFAR-10 and
+ImageNet. In particular, we view the ""effective robustness puzzle"" through a
+Fourier lens and ask how spectral properties of both models and OOD data
+influence the corresponding effective robustness. We find this Fourier lens
+offers some insight into why certain robust models, particularly those from the
+CLIP family, achieve OOD robustness. However, our analysis also makes clear
+that no known metric is consistently the best explanation (or even a strong
+explanation) of OOD robustness. Thus, to aid future research into the OOD
+puzzle, we address the gap in publicly-available models with effective
+robustness by introducing a set of pretrained models--RobustNets--with varying
+levels of OOD robustness."
+WILDS: A Benchmark of in-the-Wild Distribution Shifts,"Distribution shifts -- where the training distribution differs from the test
+distribution -- can substantially degrade the accuracy of machine learning (ML)
+systems deployed in the wild. Despite their ubiquity in the real-world
+deployments, these distribution shifts are under-represented in the datasets
+widely used in the ML community today. To address this gap, we present WILDS, a
+curated benchmark of 10 datasets reflecting a diverse range of distribution
+shifts that naturally arise in real-world applications, such as shifts across
+hospitals for tumor identification; across camera traps for wildlife
+monitoring; and across time and location in satellite imaging and poverty
+mapping. On each dataset, we show that standard training yields substantially
+lower out-of-distribution than in-distribution performance. This gap remains
+even with models trained by existing methods for tackling distribution shifts,
+underscoring the need for new methods for training models that are more robust
+to the types of distribution shifts that arise in practice. To facilitate
+method development, we provide an open-source package that automates dataset
+loading, contains default model architectures and hyperparameters, and
+standardizes evaluations. Code and leaderboards are available at"
+ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness,"Convolutional Neural Networks (CNNs) are commonly thought to recognise
+objects by learning increasingly complex representations of object shapes. Some
+recent studies suggest a more important role of image textures. We here put
+these conflicting hypotheses to a quantitative test by evaluating CNNs and
+human observers on images with a texture-shape cue conflict. We show that
+ImageNet-trained CNNs are strongly biased towards recognising textures rather
+than shapes, which is in stark contrast to human behavioural evidence and
+reveals fundamentally different classification strategies. We then demonstrate
+that the same standard architecture (ResNet-50) that learns a texture-based
+representation on ImageNet is able to learn a shape-based representation
+instead when trained on ""Stylized-ImageNet"", a stylized version of ImageNet.
+This provides a much better fit for human behavioural performance in our
+well-controlled psychophysical lab setting (nine experiments totalling 48,560
+psychophysical trials across 97 observers) and comes with a number of
+unexpected emergent benefits such as improved object detection performance and
+previously unseen robustness towards a wide range of image distortions,
+highlighting advantages of a shape-based representation."
+Natural Adversarial Examples,"We introduce two challenging datasets that reliably cause machine learning
+model performance to substantially degrade. The datasets are collected with a
+simple adversarial filtration technique to create datasets with limited
+spurious cues. Our datasets' real-world, unmodified examples transfer to
+various unseen models reliably, demonstrating that computer vision models have
+shared weaknesses. The first dataset is called ImageNet-A and is like the
+ImageNet test set, but it is far more challenging for existing models. We also
+curate an adversarial out-of-distribution detection dataset called ImageNet-O,
+which is the first out-of-distribution detection dataset created for ImageNet
+models. On ImageNet-A a DenseNet-121 obtains around 2% accuracy, an accuracy
+drop of approximately 90%, and its out-of-distribution detection performance on
+ImageNet-O is near random chance levels. We find that existing data
+augmentation techniques hardly boost performance, and using other public
+training datasets provides improvements that are limited. However, we find that
+improvements to computer vision architectures provide a promising path towards
+robust models."
+Back to the Source: Diffusion-Driven Test-Time Adaptation,"Test-time adaptation harnesses test inputs to improve the accuracy of a model
+trained on source data when tested on shifted target data. Existing methods
+update the source model by (re-)training on each target domain. While
+effective, re-training is sensitive to the amount and order of the data and the
+hyperparameters for optimization. We instead update the target data, by
+projecting all test inputs toward the source domain with a generative diffusion
+model. Our diffusion-driven adaptation method, DDA, shares its models for
+classification and generation across all domains. Both models are trained on
+the source domain, then fixed during testing. We augment diffusion with image
+guidance and self-ensembling to automatically decide how much to adapt. Input
+adaptation by DDA is more robust than prior model adaptation approaches across
+a variety of corruptions, architectures, and data regimes on the ImageNet-C
+benchmark. With its input-wise updates, DDA succeeds where model adaptation
+degrades on too little data in small batches, dependent data in non-uniform
+order, or mixed data with multiple corruptions."
+GSCLIP : A Framework for Explaining Distribution Shifts in Natural Language,"Helping end users comprehend the abstract distribution shifts can greatly
+facilitate AI deployment. Motivated by this, we propose a novel task, dataset
+explanation. Given two image data sets, dataset explanation aims to
+automatically point out their dataset-level distribution shifts with natural
+language. Current techniques for monitoring distribution shifts provide
+inadequate information to understand datasets with the goal of improving data
+quality. Therefore, we introduce GSCLIP, a training-free framework to solve the
+dataset explanation task. In GSCLIP, we propose the selector as the first
+quantitative evaluation method to identify explanations that are proper to
+summarize dataset shifts. Furthermore, we leverage this selector to demonstrate
+the superiority of a generator based on language model generation. Systematic
+evaluation on natural data shift verifies that GSCLIP, a combined system of a
+hybrid generator group and an efficient selector is not only easy-to-use but
+also powerful for dataset explanation at scale."
+Robustness of Epinets against Distributional Shifts,"Recent work introduced the epinet as a new approach to uncertainty modeling
+in deep learning. An epinet is a small neural network added to traditional
+neural networks, which, together, can produce predictive distributions. In
+particular, using an epinet can greatly improve the quality of joint
+predictions across multiple inputs, a measure of how well a neural network
+knows what it does not know. In this paper, we examine whether epinets can
+offer similar advantages under distributional shifts. We find that, across
+ImageNet-A/O/C, epinets generally improve robustness metrics. Moreover, these
+improvements are more significant than those afforded by even very large
+ensembles at orders of magnitude lower computational costs. However, these
+improvements are relatively small compared to the outstanding issues in
+distributionally-robust deep learning. Epinets may be a useful tool in the
+toolbox, but they are far from the complete solution."
+Agreement-on-the-Line: Predicting the Performance of Neural Networks under Distribution Shift,"Recently, Miller et al. showed that a model's in-distribution (ID) accuracy
+has a strong linear correlation with its out-of-distribution (OOD) accuracy on
+several OOD benchmarks -- a phenomenon they dubbed ''accuracy-on-the-line''.
+While a useful tool for model selection (i.e., the model most likely to perform
+the best OOD is the one with highest ID accuracy), this fact does not help
+estimate the actual OOD performance of models without access to a labeled OOD
+validation set. In this paper, we show a similar but surprising phenomenon also
+holds for the agreement between pairs of neural network classifiers: whenever
+accuracy-on-the-line holds, we observe that the OOD agreement between the
+predictions of any two pairs of neural networks (with potentially different
+architectures) also observes a strong linear correlation with their ID
+agreement. Furthermore, we observe that the slope and bias of OOD vs ID
+agreement closely matches that of OOD vs ID accuracy. This phenomenon, which we
+call agreement-on-the-line, has important practical applications: without any
+labeled data, we can predict the OOD accuracy of classifiers}, since OOD
+agreement can be estimated with just unlabeled data. Our prediction algorithm
+outperforms previous methods both in shifts where agreement-on-the-line holds
+and, surprisingly, when accuracy is not on the line. This phenomenon also
+provides new insights into deep neural networks: unlike accuracy-on-the-line,
+agreement-on-the-line appears to only hold for neural network classifiers."
+Adversarial Text Normalization,"Text-based adversarial attacks are becoming more commonplace and accessible
+to general internet users. As these attacks proliferate, the need to address
+the gap in model robustness becomes imminent. While retraining on adversarial
+data may increase performance, there remains an additional class of
+character-level attacks on which these models falter. Additionally, the process
+to retrain a model is time and resource intensive, creating a need for a
+lightweight, reusable defense. In this work, we propose the Adversarial Text
+Normalizer, a novel method that restores baseline performance on attacked
+content with low computational overhead. We evaluate the efficacy of the
+normalizer on two problem areas prone to adversarial attacks, i.e. Hate Speech
+and Natural Language Inference. We find that text normalization provides a
+task-agnostic defense against character-level attacks that can be implemented
+supplementary to adversarial retraining solutions, which are more suited for
+semantic alterations."
+Robustifying Vision Transformer without Retraining from Scratch by Test-Time Class-Conditional Feature Alignment,"Vision Transformer (ViT) is becoming more popular in image processing.
+Specifically, we investigate the effectiveness of test-time adaptation (TTA) on
+ViT, a technique that has emerged to correct its prediction during test-time by
+itself. First, we benchmark various test-time adaptation approaches on ViT-B16
+and ViT-L16. It is shown that the TTA is effective on ViT and the
+prior-convention (sensibly selecting modulation parameters) is not necessary
+when using proper loss function. Based on the observation, we propose a new
+test-time adaptation method called class-conditional feature alignment (CFA),
+which minimizes both the class-conditional distribution differences and the
+whole distribution differences of the hidden representation between the source
+and target in an online manner. Experiments of image classification tasks on
+common corruption (CIFAR-10-C, CIFAR-100-C, and ImageNet-C) and domain
+adaptation (digits datasets and ImageNet-Sketch) show that CFA stably
+outperforms the existing baselines on various datasets. We also verify that CFA
+is model agnostic by experimenting on ResNet, MLP-Mixer, and several ViT
+variants (ViT-AugReg, DeiT, and BeiT). Using BeiT backbone, CFA achieves 19.8%
+top-1 error rate on ImageNet-C, outperforming the existing test-time adaptation
+baseline 44.0%. This is a state-of-the-art result among TTA methods that do not
+need to alter training phase."
+Increasing Confidence in Adversarial Robustness Evaluations,"Hundreds of defenses have been proposed to make deep neural networks robust
+against minimal (adversarial) input perturbations. However, only a handful of
+these defenses held up their claims because correctly evaluating robustness is
+extremely challenging: Weak attacks often fail to find adversarial examples
+even if they unknowingly exist, thereby making a vulnerable network look
+robust. In this paper, we propose a test to identify weak attacks, and thus
+weak defense evaluations. Our test slightly modifies a neural network to
+guarantee the existence of an adversarial example for every sample.
+Consequentially, any correct attack must succeed in breaking this modified
+network. For eleven out of thirteen previously-published defenses, the original
+evaluation of the defense fails our test, while stronger attacks that break
+these defenses pass it. We hope that attack unit tests - such as ours - will be
+a major component in future robustness evaluations and increase confidence in
+an empirical field that is currently riddled with skepticism."
+Demystifying the Adversarial Robustness of Random Transformation Defenses,"Neural networks' lack of robustness against attacks raises concerns in
+security-sensitive settings such as autonomous vehicles. While many
+countermeasures may look promising, only a few withstand rigorous evaluation.
+Defenses using random transformations (RT) have shown impressive results,
+particularly BaRT (Raff et al., 2019) on ImageNet. However, this type of
+defense has not been rigorously evaluated, leaving its robustness properties
+poorly understood. Their stochastic properties make evaluation more challenging
+and render many proposed attacks on deterministic models inapplicable. First,
+we show that the BPDA attack (Athalye et al., 2018a) used in BaRT's evaluation
+is ineffective and likely overestimates its robustness. We then attempt to
+construct the strongest possible RT defense through the informed selection of
+transformations and Bayesian optimization for tuning their parameters.
+Furthermore, we create the strongest possible attack to evaluate our RT
+defense. Our new attack vastly outperforms the baseline, reducing the accuracy
+by 83% compared to the 19% reduction by the commonly used EoT attack
+($4.3\times$ improvement). Our result indicates that the RT defense on the
+Imagenette dataset (a ten-class subset of ImageNet) is not robust against
+adversarial examples. Extending the study further, we use our new attack to
+adversarially train RT defense (called AdvRT), resulting in a large robustness
+gain. Code is available at"
+GSmooth: Certified Robustness against Semantic Transformations via Generalized Randomized Smoothing,"Certified defenses such as randomized smoothing have shown promise towards
+building reliable machine learning systems against $\ell_p$-norm bounded
+attacks. However, existing methods are insufficient or unable to provably
+defend against semantic transformations, especially those without closed-form
+expressions (such as defocus blur and pixelate), which are more common in
+practice and often unrestricted. To fill up this gap, we propose generalized
+randomized smoothing (GSmooth), a unified theoretical framework for certifying
+robustness against general semantic transformations via a novel dimension
+augmentation strategy. Under the GSmooth framework, we present a scalable
+algorithm that uses a surrogate image-to-image network to approximate the
+complex transformation. The surrogate model provides a powerful tool for
+studying the properties of semantic transformations and certifying robustness.
+Experimental results on several datasets demonstrate the effectiveness of our
+approach for robustness certification against multiple kinds of semantic
+transformations and corruptions, which is not achievable by the alternative
+baselines."
+Can CNNs Be More Robust Than Transformers?,"The recent success of Vision Transformers is shaking the long dominance of
+Convolutional Neural Networks (CNNs) in image recognition for a decade.
+Specifically, in terms of robustness on out-of-distribution samples, recent
+research finds that Transformers are inherently more robust than CNNs,
+regardless of different training setups. Moreover, it is believed that such
+superiority of Transformers should largely be credited to their
+self-attention-like architectures per se. In this paper, we question that
+belief by closely examining the design of Transformers. Our findings lead to
+three highly effective architecture designs for boosting robustness, yet simple
+enough to be implemented in several lines of code, namely a) patchifying input
+images, b) enlarging kernel size, and c) reducing activation layers and
+normalization layers. Bringing these components together, we are able to build
+pure CNN architectures without any attention-like operations that is as robust
+as, or even more robust than, Transformers. We hope this work can help the
+community better understand the design of robust neural architectures. The code
+is publicly available at"
+On the Robustness of Safe Reinforcement Learning under Observational Perturbations,"Safe reinforcement learning (RL) trains a policy to maximize the task reward
+while satisfying safety constraints. While prior works focus on the performance
+optimality, we find that the optimal solutions of many safe RL problems are not
+robust and safe against carefully designed observational perturbations. We
+formally analyze the unique properties of designing effective state adversarial
+attackers in the safe RL setting. We show that baseline adversarial attack
+techniques for standard RL tasks are not always effective for safe RL and
+proposed two new approaches - one maximizes the cost and the other maximizes
+the reward. One interesting and counter-intuitive finding is that the maximum
+reward attack is strong, as it can both induce unsafe behaviors and make the
+attack stealthy by maintaining the reward. We further propose a more effective
+adversarial training framework for safe RL and evaluate it via comprehensive
+experiments. This work sheds light on the inherited connection between
+observational robustness and safety in RL and provides a pioneer work for
+future safe RL studies."
+Diffusion Models for Adversarial Purification,"Adversarial purification refers to a class of defense methods that remove
+adversarial perturbations using a generative model. These methods do not make
+assumptions on the form of attack and the classification model, and thus can
+defend pre-existing classifiers against unseen threats. However, their
+performance currently falls behind adversarial training methods. In this work,
+we propose DiffPure that uses diffusion models for adversarial purification:
+Given an adversarial example, we first diffuse it with a small amount of noise
+following a forward diffusion process, and then recover the clean image through
+a reverse generative process. To evaluate our method against strong adaptive
+attacks in an efficient and scalable way, we propose to use the adjoint method
+to compute full gradients of the reverse generative process. Extensive
+experiments on three image datasets including CIFAR-10, ImageNet and CelebA-HQ
+with three classifier architectures including ResNet, WideResNet and ViT
+demonstrate that our method achieves the state-of-the-art results,
+outperforming current adversarial training and adversarial purification
+methods, often by a large margin. Project page:"
+"Distinction Maximization Loss: Efficiently Improving Classification Accuracy, Uncertainty Estimation, and Out-of-Distribution Detection Simply Replacing the Loss and Calibrating","Building robust deterministic neural networks remains a challenge. On the one
+hand, some approaches improve out-of-distribution detection at the cost of
+reducing classification accuracy in some situations. On the other hand, some
+methods simultaneously increase classification accuracy, uncertainty
+estimation, and out-of-distribution detection at the expense of reducing the
+inference efficiency and requiring training the same model many times to tune
+hyperparameters. In this paper, we propose training deterministic neural
+networks using our DisMax loss, which works as a drop-in replacement for the
+usual SoftMax loss (i.e., the combination of the linear output layer, the
+SoftMax activation, and the cross-entropy loss). Starting from the IsoMax+
+loss, we create each logit based on the distances to all prototypes rather than
+just the one associated with the correct class. We also introduce a mechanism
+to combine images to construct what we call fractional probability
+regularization. Moreover, we present a fast way to calibrate the network after
+training. Finally, we propose a composite score to perform out-of-distribution
+detection. Our experiments show that DisMax usually outperforms current
+approaches simultaneously in classification accuracy, uncertainty estimation,
+and out-of-distribution detection while maintaining deterministic neural
+network inference efficiency and avoiding training the same model repetitively
+for hyperparameter tuning. The code to reproduce the results is available at"
+Smooth-Reduce: Leveraging Patches for Improved Certified Robustness,"Randomized smoothing (RS) has been shown to be a fast, scalable technique for
+certifying the robustness of deep neural network classifiers. However, methods
+based on RS require augmenting data with large amounts of noise, which leads to
+significant drops in accuracy. We propose a training-free, modified smoothing
+approach, Smooth-Reduce, that leverages patching and aggregation to provide
+improved classifier certificates. Our algorithm classifies overlapping patches
+extracted from an input image, and aggregates the predicted logits to certify a
+larger radius around the input. We study two aggregation schemes -- max and
+mean -- and show that both approaches provide better certificates in terms of
+certified accuracy, average certified radii and abstention rates as compared to
+concurrent approaches. We also provide theoretical guarantees for such
+certificates, and empirically show significant improvements over other
+randomized smoothing methods that require expensive retraining. Further, we
+extend our approach to videos and provide meaningful certificates for video
+classifiers. A project page can be found at"
+Adversarial Training for High-Stakes Reliability,"In the future, powerful AI systems may be deployed in high-stakes settings,
+where a single failure could be catastrophic. One technique for improving AI
+safety in high-stakes settings is adversarial training, which uses an adversary
+to generate examples to train on in order to achieve better worst-case
+performance."
+Formulating Robustness Against Unforeseen Attacks,"Existing defenses against adversarial examples such as adversarial training
+typically assume that the adversary will conform to a specific or known threat
+model, such as $\ell_p$ perturbations within a fixed budget. In this paper, we
+focus on the scenario where there is a mismatch in the threat model assumed by
+the defense during training, and the actual capabilities of the adversary at
+test time. We ask the question: if the learner trains against a specific
+""source"" threat model, when can we expect robustness to generalize to a
+stronger unknown ""target"" threat model during test-time? Our key contribution
+is to formally define the problem of learning and generalization with an
+unforeseen adversary, which helps us reason about the increase in adversarial
+risk from the conventional perspective of a known adversary. Applying our
+framework, we derive a generalization bound which relates the generalization
+gap between source and target threat models to variation of the feature
+extractor, which measures the expected maximum difference between extracted
+features across a given threat model. Based on our generalization bound, we
+propose adversarial training with variation regularization (AT-VR) which
+reduces variation of the feature extractor across the source threat model
+during training. We empirically demonstrate that AT-VR can lead to improved
+generalization to unforeseen attacks during test-time compared to standard
+adversarial training on Gaussian and image datasets."
+Can Rationalization Improve Robustness?,"A growing line of work has investigated the development of neural NLP models
+that can produce rationales--subsets of input that can explain their model
+predictions. In this paper, we ask whether such rationale models can also
+provide robustness to adversarial attacks in addition to their interpretable
+nature. Since these models need to first generate rationales (""rationalizer"")
+before making predictions (""predictor""), they have the potential to ignore
+noise or adversarially added text by simply masking it out of the generated
+rationale. To this end, we systematically generate various types of 'AddText'
+attacks for both token and sentence-level rationalization tasks, and perform an
+extensive empirical evaluation of state-of-the-art rationale models across five
+different tasks. Our experiments reveal that the rationale models show the
+promise to improve robustness, while they struggle in certain scenarios--when
+the rationalizer is sensitive to positional bias or lexical choices of attack
+text. Further, leveraging human rationale as supervision does not always
+translate to better performance. Our study is a first step towards exploring
+the interplay between interpretability and robustness in the
+rationalize-then-predict framework."
+Probable Domain Generalization via Quantile Risk Minimization,"Domain generalization (DG) seeks predictors which perform well on unseen test
+distributions by leveraging labeled training data from multiple related
+distributions or domains. To achieve this, the standard formulation optimizes
+for worst-case performance over the set of all possible domains. However, with
+worst-case shifts very unlikely in practice, this generally leads to
+overly-conservative solutions. In fact, a recent study found that no DG
+algorithm outperformed empirical risk minimization in terms of average
+performance. In this work, we argue that DG is neither a worst-case problem nor
+an average-case problem, but rather a probabilistic one. To this end, we
+propose a probabilistic framework for DG, which we call Probable Domain
+Generalization, wherein our key idea is that distribution shifts seen during
+training should inform us of probable shifts at test time. To realize this, we
+explicitly relate training and test domains as draws from the same underlying
+meta-distribution, and propose a new optimization problem -- Quantile Risk
+Minimization (QRM) -- which requires that predictors generalize with high
+probability. We then prove that QRM: (i) produces predictors that generalize to
+new domains with a desired probability, given sufficiently many domains and
+samples; and (ii) recovers the causal predictor as the desired probability of
+generalization approaches one. In our experiments, we introduce a more holistic
+quantile-focused evaluation protocol for DG, and show that our algorithms
+outperform state-of-the-art baselines on real and synthetic data."
+Fast AdvProp,"Adversarial Propagation (AdvProp) is an effective way to improve recognition
+models, leveraging adversarial examples. Nonetheless, AdvProp suffers from the
+extremely slow training speed, mainly because: a) extra forward and backward
+passes are required for generating adversarial examples; b) both original
+samples and their adversarial counterparts are used for training (i.e.,
+2$\times$ data). In this paper, we introduce Fast AdvProp, which aggressively
+revamps AdvProp's costly training components, rendering the method nearly as
+cheap as the vanilla training. Specifically, our modifications in Fast AdvProp
+are guided by the hypothesis that disentangled learning with adversarial
+examples is the key for performance improvements, while other training recipes
+(e.g., paired clean and adversarial training samples, multi-step adversarial
+attackers) could be largely simplified."
+Intrinsic dimension estimation for discrete metrics,"Real world-datasets characterized by discrete features are ubiquitous: from
+categorical surveys to clinical questionnaires, from unweighted networks to DNA
+sequences. Nevertheless, the most common unsupervised dimensional reduction
+methods are designed for continuous spaces, and their use for discrete spaces
+can lead to errors and biases. In this letter we introduce an algorithm to
+infer the intrinsic dimension (ID) of datasets embedded in discrete spaces. We
+demonstrate its accuracy on benchmark datasets, and we apply it to analyze a
+metagenomic dataset for species fingerprinting, finding a surprisingly small
+ID, of order 2. This suggests that evolutive pressure acts on a low-dimensional
+manifold despite the high-dimensionality of sequences' space."
+Stream-based active learning with linear models,"The proliferation of automated data collection schemes and the advances in
+sensorics are increasing the amount of data we are able to monitor in
+real-time. However, given the high annotation costs and the time required by
+quality inspections, data is often available in an unlabeled form. This is
+fostering the use of active learning for the development of soft sensors and
+predictive models. In production, instead of performing random inspections to
+obtain product information, labels are collected by evaluating the information
+content of the unlabeled data. Several query strategy frameworks for regression
+have been proposed in the literature but most of the focus has been dedicated
+to the static pool-based scenario. In this work, we propose a new strategy for
+the stream-based scenario, where instances are sequentially offered to the
+learner, which must instantaneously decide whether to perform the quality check
+to obtain the label or discard the instance. The approach is inspired by the
+optimal experimental design theory and the iterative aspect of the
+decision-making process is tackled by setting a threshold on the
+informativeness of the unlabeled data points. The proposed approach is
+evaluated using numerical simulations and the Tennessee Eastman Process
+simulator. The results confirm that selecting the examples suggested by the
+proposed algorithm allows for a faster reduction in the prediction error."
+"A law of adversarial risk, interpolation, and label noise","In supervised learning, it has been shown that label noise in the data can be
+interpolated without penalties on test accuracy under many circumstances. We
+show that interpolating label noise induces adversarial vulnerability, and
+prove the first theorem showing the dependence of label noise and adversarial
+risk in terms of the data distribution. Our results are almost sharp without
+accounting for the inductive bias of the learning algorithm. We also show that
+inductive bias makes the effect of label noise much stronger."
+Adversarial Robustness is at Odds with Lazy Training,"Recent works show that random neural networks are vulnerable against
+adversarial attacks [Daniely and Schacham, 2020] and that such attacks can be
+easily found using a single step of gradient descent [Bubeck et al., 2021]. In
+this work, we take it one step further and show that a single gradient step can
+find adversarial examples for networks trained in the so-called lazy regime.
+This regime is interesting because even though the neural network weights
+remain close to the initialization, there exist networks with small
+generalization error, which can be found efficiently using first-order methods.
+Our work challenges the model of the lazy regime, the dominant regime in which
+neural networks are provably efficiently learnable. We show that the networks
+trained in this regime, even though they enjoy good theoretical computational
+guarantees, remain vulnerable to adversarial examples. To the best of our
+knowledge, this is the first work to prove that such well-generalizable neural
+networks are still vulnerable to adversarial attacks."

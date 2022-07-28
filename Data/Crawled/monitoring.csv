@@ -1,0 +1,746 @@
+title,abstract
+Deep Anomaly Detection with Outlier Exposure,"It is important to detect anomalous inputs when deploying machine learning
+systems. The use of larger and more complex inputs in deep learning magnifies
+the difficulty of distinguishing between anomalous and in-distribution
+examples. At the same time, diverse image and text data are available in
+enormous quantities. We propose leveraging these data to improve deep anomaly
+detection by training anomaly detectors against an auxiliary dataset of
+outliers, an approach we call Outlier Exposure (OE). This enables anomaly
+detectors to generalize and detect unseen anomalies. In extensive experiments
+on natural language processing and small- and large-scale vision tasks, we find
+that Outlier Exposure significantly improves detection performance. We also
+observe that cutting-edge generative models trained on CIFAR-10 may assign
+higher likelihoods to SVHN images than to CIFAR-10 images; we use OE to
+mitigate this issue. We also analyze the flexibility and robustness of Outlier
+Exposure, and identify characteristics of the auxiliary dataset that improve
+performance."
+PixMix: Dreamlike Pictures Comprehensively Improve Safety Measures,"In real-world applications of machine learning, reliable and safe systems
+must consider measures of performance beyond standard test set accuracy. These
+other goals include out-of-distribution (OOD) robustness, prediction
+consistency, resilience to adversaries, calibrated uncertainty estimates, and
+the ability to detect anomalous inputs. However, improving performance towards
+these goals is often a balancing act that today's methods cannot achieve
+without sacrificing performance on other safety axes. For instance, adversarial
+training improves adversarial robustness but sharply degrades other classifier
+performance metrics. Similarly, strong data augmentation and regularization
+techniques often improve OOD robustness but harm anomaly detection, raising the
+question of whether a Pareto improvement on all existing safety measures is
+possible. To meet this challenge, we design a new data augmentation strategy
+utilizing the natural structural complexity of pictures such as fractals, which
+outperforms numerous baselines, is near Pareto-optimal, and roundly improves
+safety measures."
+ViM: Out-Of-Distribution with Virtual-logit Matching,"Most of the existing Out-Of-Distribution (OOD) detection algorithms depend on
+single input source: the feature, the logit, or the softmax probability.
+However, the immense diversity of the OOD examples makes such methods fragile.
+There are OOD samples that are easy to identify in the feature space while hard
+to distinguish in the logit space and vice versa. Motivated by this
+observation, we propose a novel OOD scoring method named Virtual-logit Matching
+(ViM), which combines the class-agnostic score from feature space and the
+In-Distribution (ID) class-dependent logits. Specifically, an additional logit
+representing the virtual OOD class is generated from the residual of the
+feature against the principal space, and then matched with the original logits
+by a constant scaling. The probability of this virtual logit after softmax is
+the indicator of OOD-ness. To facilitate the evaluation of large-scale OOD
+detection in academia, we create a new OOD dataset for ImageNet-1K, which is
+human-annotated and is 8.8x the size of existing datasets. We conducted
+extensive experiments, including CNNs and vision transformers, to demonstrate
+the effectiveness of the proposed ViM score. In particular, using the BiT-S
+model, our method gets an average AUROC 90.91% on four difficult OOD
+benchmarks, which is 4% ahead of the best baseline. Code and dataset are
+available at"
+Scaling Out-of-Distribution Detection for Real-World Settings,"Detecting out-of-distribution examples is important for safety-critical
+machine learning applications such as detecting novel biological phenomena and
+self-driving cars. However, existing research mainly focuses on simple
+small-scale settings. To set the stage for more realistic out-of-distribution
+detection, we depart from small-scale settings and explore large-scale
+multiclass and multi-label settings with high-resolution images and thousands
+of classes. To make future work in real-world settings possible, we create new
+benchmarks for three large-scale settings. To test ImageNet multiclass anomaly
+detectors, we introduce the Species dataset containing over 700,000 images and
+over a thousand anomalous species. We leverage ImageNet-21K to evaluate PASCAL
+VOC and COCO multilabel anomaly detectors. Third, we introduce a new benchmark
+for anomaly segmentation by introducing a segmentation benchmark with road
+anomalies. We conduct extensive experiments in these more realistic settings
+for out-of-distribution detection and find that a surprisingly simple detector
+based on the maximum logit outperforms prior methods in all the large-scale
+multi-class, multi-label, and segmentation tasks, establishing a simple new
+baseline for future work."
+A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks,"We consider the two related problems of detecting if an example is
+misclassified or out-of-distribution. We present a simple baseline that
+utilizes probabilities from softmax distributions. Correctly classified
+examples tend to have greater maximum softmax probabilities than erroneously
+classified and out-of-distribution examples, allowing for their detection. We
+assess performance by defining several tasks in computer vision, natural
+language processing, and automatic speech recognition, showing the
+effectiveness of this baseline across all. We then show the baseline can
+sometimes be surpassed, demonstrating the room for future research on these
+underexplored detection tasks."
+On Calibration of Modern Neural Networks,"Confidence calibration -- the problem of predicting probability estimates
+representative of the true correctness likelihood -- is important for
+classification models in many applications. We discover that modern neural
+networks, unlike those from a decade ago, are poorly calibrated. Through
+extensive experiments, we observe that depth, width, weight decay, and Batch
+Normalization are important factors influencing calibration. We evaluate the
+performance of various post-processing calibration methods on state-of-the-art
+architectures with image and document classification datasets. Our analysis and
+experiments not only offer insights into neural network learning, but also
+provide a simple and straightforward recipe for practical settings: on most
+datasets, temperature scaling -- a single-parameter variant of Platt Scaling --
+is surprisingly effective at calibrating predictions."
+Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles,"Deep neural networks (NNs) are powerful black box predictors that have
+recently achieved impressive performance on a wide spectrum of tasks.
+Quantifying predictive uncertainty in NNs is a challenging and yet unsolved
+problem. Bayesian NNs, which learn a distribution over weights, are currently
+the state-of-the-art for estimating predictive uncertainty; however these
+require significant modifications to the training procedure and are
+computationally expensive compared to standard (non-Bayesian) NNs. We propose
+an alternative to Bayesian NNs that is simple to implement, readily
+parallelizable, requires very little hyperparameter tuning, and yields high
+quality predictive uncertainty estimates. Through a series of experiments on
+classification and regression benchmarks, we demonstrate that our method
+produces well-calibrated uncertainty estimates which are as good or better than
+approximate Bayesian NNs. To assess robustness to dataset shift, we evaluate
+the predictive uncertainty on test examples from known and unknown
+distributions, and show that our method is able to express higher uncertainty
+on out-of-distribution examples. We demonstrate the scalability of our method
+by evaluating predictive uncertainty estimates on ImageNet."
+A Simple Unified Framework for Detecting Out-of-Distribution Samples and Adversarial Attacks,"Detecting test samples drawn sufficiently far away from the training
+distribution statistically or adversarially is a fundamental requirement for
+deploying a good classifier in many real-world machine learning applications.
+However, deep neural networks with the softmax classifier are known to produce
+highly overconfident posterior distributions even for such abnormal samples. In
+this paper, we propose a simple yet effective method for detecting any abnormal
+samples, which is applicable to any pre-trained softmax neural classifier. We
+obtain the class conditional Gaussian distributions with respect to (low- and
+upper-level) features of the deep models under Gaussian discriminant analysis,
+which result in a confidence score based on the Mahalanobis distance. While
+most prior methods have been evaluated for detecting either out-of-distribution
+or adversarial samples, but not both, the proposed method achieves the
+state-of-the-art performances for both cases in our experiments. Moreover, we
+found that our proposed method is more robust in harsh cases, e.g., when the
+training dataset has noisy labels or small number of samples. Finally, we show
+that the proposed method enjoys broader usage by applying it to
+class-incremental learning: whenever out-of-distribution samples are detected,
+our classification rule can incorporate new classes well without further
+training deep models."
+VOS: Learning What You Don't Know by Virtual Outlier Synthesis,"Out-of-distribution (OOD) detection has received much attention lately due to
+its importance in the safe deployment of neural networks. One of the key
+challenges is that models lack supervision signals from unknown data, and as a
+result, can produce overconfident predictions on OOD data. Previous approaches
+rely on real outlier datasets for model regularization, which can be costly and
+sometimes infeasible to obtain in practice. In this paper, we present VOS, a
+novel framework for OOD detection by adaptively synthesizing virtual outliers
+that can meaningfully regularize the model's decision boundary during training.
+Specifically, VOS samples virtual outliers from the low-likelihood region of
+the class-conditional distribution estimated in the feature space. Alongside,
+we introduce a novel unknown-aware training objective, which contrastively
+shapes the uncertainty space between the ID data and synthesized outlier data.
+VOS achieves competitive performance on both object detection and image
+classification models, reducing the FPR95 by up to 9.36% compared to the
+previous best method on object detectors. Code is available at"
+Posterior calibration and exploratory analysis for natural language processing models,"Many models in natural language processing define probabilistic distributions
+over linguistic structures. We argue that (1) the quality of a model' s
+posterior distribution can and should be directly evaluated, as to whether
+probabilities correspond to empirical frequencies, and (2) NLP uncertainty can
+be projected not only to pipeline components, but also to exploratory data
+analysis, telling a user when to trust and not trust the NLP analysis. We
+present a method to analyze calibration, and apply it to compare the
+miscalibration of several commonly used models. We also contribute a
+coreference sampling algorithm that can create confidence intervals for a
+political event extraction task."
+Accurate Uncertainties for Deep Learning Using Calibrated Regression,"Methods for reasoning under uncertainty are a key building block of accurate
+and reliable machine learning systems. Bayesian methods provide a general
+framework to quantify uncertainty. However, because of model misspecification
+and the use of approximate inference, Bayesian uncertainty estimates are often
+inaccurate -- for example, a 90% credible interval may not contain the true
+outcome 90% of the time. Here, we propose a simple procedure for calibrating
+any regression algorithm; when applied to Bayesian and probabilistic models, it
+is guaranteed to produce calibrated uncertainty estimates given enough data.
+Our procedure is inspired by Platt scaling and extends previous work on
+classification. We evaluate this approach on Bayesian linear regression,
+feedforward, and recurrent neural networks, and find that it consistently
+outputs well-calibrated credible intervals while improving performance on time
+series forecasting and model-based reinforcement learning tasks."
+Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift,"Modern machine learning methods including deep learning have achieved great
+success in predictive accuracy for supervised learning tasks, but may still
+fall short in giving useful estimates of their predictive {\em uncertainty}.
+Quantifying uncertainty is especially critical in real-world settings, which
+often involve input distributions that are shifted from the training
+distribution due to a variety of factors including sample bias and
+non-stationarity. In such settings, well calibrated uncertainty estimates
+convey information about when a model's output should (or should not) be
+trusted. Many probabilistic deep learning methods, including Bayesian-and
+non-Bayesian methods, have been proposed in the literature for quantifying
+predictive uncertainty, but to our knowledge there has not previously been a
+rigorous large-scale empirical comparison of these methods under dataset shift.
+We present a large-scale benchmark of existing state-of-the-art methods on
+classification problems and investigate the effect of dataset shift on accuracy
+and calibration. We find that traditional post-hoc calibration does indeed fall
+short, as do several other previous methods. However, some methods that
+marginalize over models give surprisingly strong results across a broad
+spectrum of tasks."
+The Mythos of Model Interpretability,"Supervised machine learning models boast remarkable predictive capabilities.
+But can you trust your model? Will it work in deployment? What else can it tell
+you about the world? We want models to be not only good, but interpretable. And
+yet the task of interpretation appears underspecified. Papers provide diverse
+and sometimes non-overlapping motivations for interpretability, and offer
+myriad notions of what attributes render models interpretable. Despite this
+ambiguity, many papers proclaim interpretability axiomatically, absent further
+explanation. In this paper, we seek to refine the discourse on
+interpretability. First, we examine the motivations underlying interest in
+interpretability, finding them to be diverse and occasionally discordant. Then,
+we address model properties and techniques thought to confer interpretability,
+identifying transparency to humans and post-hoc explanations as competing
+notions. Throughout, we discuss the feasibility and desirability of different
+notions, and question the oft-made assertions that linear models are
+interpretable and that deep neural networks are not."
+Sanity Checks for Saliency Maps,"Saliency methods have emerged as a popular tool to highlight features in an
+input deemed relevant for the prediction of a learned model. Several saliency
+methods have been proposed, often guided by visual appeal on image data. In
+this work, we propose an actionable methodology to evaluate what kinds of
+explanations a given method can and cannot provide. We find that reliance,
+solely, on visual assessment can be misleading. Through extensive experiments
+we show that some existing saliency methods are independent both of the model
+and of the data generating process. Consequently, methods that fail the
+proposed tests are inadequate for tasks that are sensitive to either data or
+model, such as, finding outliers in the data, explaining the relationship
+between inputs and outputs that the model learned, and debugging the model. We
+interpret our findings through an analogy with edge detection in images, a
+technique that requires neither training data nor model. Theory in the case of
+a linear model and a single-layer convolutional neural network supports our
+experimental findings."
+Locating and Editing Factual Associations in GPT,"We analyze the storage and recall of factual associations in autoregressive
+transformer language models, finding evidence that these associations
+correspond to localized, directly-editable computations. We first develop a
+causal intervention for identifying neuron activations that are decisive in a
+model's factual predictions. This reveals a distinct set of steps in
+middle-layer feed-forward modules that mediate factual predictions while
+processing subject tokens. To test our hypothesis that these computations
+correspond to factual association recall, we modify feed-forward weights to
+update specific factual associations using Rank-One Model Editing (ROME). We
+find that ROME is effective on a standard zero-shot relation extraction (zsRE)
+model-editing task, comparable to existing methods. To perform a more sensitive
+evaluation, we also evaluate ROME on a new dataset of counterfactual
+assertions, on which it simultaneously maintains both specificity and
+generalization, whereas other methods sacrifice one or another. Our results
+confirm an important role for mid-layer feed-forward modules in storing factual
+associations and suggest that direct manipulation of computational mechanisms
+may be a feasible approach for model editing. The code, dataset,
+visualizations, and an interactive demo notebook are available at"
+Interpretable Explanations of Black Boxes by Meaningful Perturbation,"As machine learning algorithms are increasingly applied to high impact yet
+high risk tasks, such as medical diagnosis or autonomous driving, it is
+critical that researchers can explain how such algorithms arrived at their
+predictions. In recent years, a number of image saliency methods have been
+developed to summarize where highly complex neural networks ""look"" in an image
+for evidence for their predictions. However, these techniques are limited by
+their heuristic nature and architectural constraints. In this paper, we make
+two main contributions: First, we propose a general framework for learning
+different kinds of explanations for any black box algorithm. Second, we
+specialise the framework to find the part of an image most responsible for a
+classifier decision. Unlike previous works, our method is model-agnostic and
+testable because it is grounded in explicit and interpretable image
+perturbations."
+Acquisition of Chess Knowledge in AlphaZero,"What is learned by sophisticated neural network agents such as AlphaZero?
+This question is of both scientific and practical interest. If the
+representations of strong neural networks bear no resemblance to human
+concepts, our ability to understand faithful explanations of their decisions
+will be restricted, ultimately limiting what we can achieve with neural network
+interpretability. In this work we provide evidence that human knowledge is
+acquired by the AlphaZero neural network as it trains on the game of chess. By
+probing for a broad range of human chess concepts we show when and where these
+concepts are represented in the AlphaZero network. We also provide a
+behavioural analysis focusing on opening play, including qualitative analysis
+from chess Grandmaster Vladimir Kramnik. Finally, we carry out a preliminary
+investigation looking at the low-level details of AlphaZero's representations,
+and make the resulting behavioural and representational analyses available
+online."
+Network Dissection: Quantifying Interpretability of Deep Visual Representations,"We propose a general framework called Network Dissection for quantifying the
+interpretability of latent representations of CNNs by evaluating the alignment
+between individual hidden units and a set of semantic concepts. Given any CNN
+model, the proposed method draws on a broad data set of visual concepts to
+score the semantics of hidden units at each intermediate convolutional layer.
+The units with semantics are given labels across a range of objects, parts,
+scenes, textures, materials, and colors. We use the proposed method to test the
+hypothesis that interpretability of units is equivalent to random linear
+combinations of units, then we apply our method to compare the latent
+representations of various networks when trained to solve different supervised
+and self-supervised training tasks. We further analyze the effect of training
+iterations, compare networks trained with different initializations, examine
+the impact of network depth and width, and measure the effect of dropout and
+batch normalization on the interpretability of deep visual representations. We
+demonstrate that the proposed method can shed light on characteristics of CNN
+models and training methods that go beyond measurements of their discriminative
+power."
+Network Dissection: Quantifying Interpretability of Deep Visual Representations,"We propose a general framework called Network Dissection for quantifying the
+interpretability of latent representations of CNNs by evaluating the alignment
+between individual hidden units and a set of semantic concepts. Given any CNN
+model, the proposed method draws on a broad data set of visual concepts to
+score the semantics of hidden units at each intermediate convolutional layer.
+The units with semantics are given labels across a range of objects, parts,
+scenes, textures, materials, and colors. We use the proposed method to test the
+hypothesis that interpretability of units is equivalent to random linear
+combinations of units, then we apply our method to compare the latent
+representations of various networks when trained to solve different supervised
+and self-supervised training tasks. We further analyze the effect of training
+iterations, compare networks trained with different initializations, examine
+the impact of network depth and width, and measure the effect of dropout and
+batch normalization on the interpretability of deep visual representations. We
+demonstrate that the proposed method can shed light on characteristics of CNN
+models and training methods that go beyond measurements of their discriminative
+power."
+Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead,"Black box machine learning models are currently being used for high stakes
+decision-making throughout society, causing problems throughout healthcare,
+criminal justice, and in other domains. People have hoped that creating methods
+for explaining these black box models will alleviate some of these problems,
+but trying to \textit{explain} black box models, rather than creating models
+that are \textit{interpretable} in the first place, is likely to perpetuate bad
+practices and can potentially cause catastrophic harm to society. There is a
+way forward -- it is to design models that are inherently interpretable. This
+manuscript clarifies the chasm between explaining black boxes and using
+inherently interpretable models, outlines several key reasons why explainable
+black boxes should be avoided in high-stakes decisions, identifies challenges
+to interpretable machine learning, and provides several example applications
+where interpretable models could potentially replace black box models in
+criminal justice, healthcare, and computer vision."
+Convergent Learning: Do different neural networks learn the same representations?,"Recent success in training deep neural networks have prompted active
+investigation into the features learned on their intermediate layers. Such
+research is difficult because it requires making sense of non-linear
+computations performed by millions of parameters, but valuable because it
+increases our ability to understand current models and create improved versions
+of them. In this paper we investigate the extent to which neural networks
+exhibit what we call convergent learning, which is when the representations
+learned by multiple nets converge to a set of features which are either
+individually similar between networks or where subsets of features span similar
+low-dimensional spaces. We propose a specific method of probing
+representations: training multiple networks and then comparing and contrasting
+their individual, learned representations at the level of neurons or groups of
+neurons. We begin research into this question using three techniques to
+approximately align different neural networks on a feature level: a bipartite
+matching approach that makes one-to-one assignments between neurons, a sparse
+prediction approach that finds one-to-many mappings, and a spectral clustering
+approach that finds many-to-many mappings. This initial investigation reveals a
+few previously unknown properties of neural networks, and we argue that future
+research into the question of convergent learning will yield many more. The
+insights described here include (1) that some features are learned reliably in
+multiple networks, yet other features are not consistently learned; (2) that
+units learn to span low-dimensional subspaces and, while these subspaces are
+common to multiple networks, the specific basis vectors learned are not; (3)
+that the representation codes show evidence of being a mix between a local code
+and slightly, but not fully, distributed codes across multiple units."
+Detecting AI Trojans Using Meta Neural Analysis,"In machine learning Trojan attacks, an adversary trains a corrupted model
+that obtains good performance on normal data but behaves maliciously on data
+samples with certain trigger patterns. Several approaches have been proposed to
+detect such attacks, but they make undesirable assumptions about the attack
+strategies or require direct access to the trained models, which restricts
+their utility in practice."
+Universal Litmus Patterns: Revealing Backdoor Attacks in CNNs,"The unprecedented success of deep neural networks in many applications has
+made these networks a prime target for adversarial exploitation. In this paper,
+we introduce a benchmark technique for detecting backdoor attacks (aka Trojan
+attacks) on deep convolutional neural networks (CNNs). We introduce the concept
+of Universal Litmus Patterns (ULPs), which enable one to reveal backdoor
+attacks by feeding these universal patterns to the network and analyzing the
+output (i.e., classifying the network as `clean' or `corrupted'). This
+detection is fast because it requires only a few forward passes through a CNN.
+We demonstrate the effectiveness of ULPs for detecting backdoor attacks on
+thousands of networks with different architectures trained on four benchmark
+datasets, namely the German Traffic Sign Recognition Benchmark (GTSRB), MNIST,
+CIFAR10, and Tiny-ImageNet. The codes and train/test models for this paper can
+be found here"
+Poisoning and Backdooring Contrastive Learning,"Multimodal contrastive learning methods like CLIP train on noisy and
+uncurated training datasets. This is cheaper than labeling datasets manually,
+and even improves out-of-distribution robustness. We show that this practice
+makes backdoor and poisoning attacks a significant threat. By poisoning just
+0.01% of a dataset (e.g., just 300 images of the 3 million-example Conceptual
+Captions dataset), we can cause the model to misclassify test images by
+overlaying a small patch. Targeted poisoning attacks, whereby the model
+misclassifies a particular test input with an adversarially-desired label, are
+even easier requiring control of 0.0001% of the dataset (e.g., just three out
+of the 3 million images). Our attacks call into question whether training on
+noisy and uncurated Internet scrapes is desirable."
+STRIP: A Defence Against Trojan Attacks on Deep Neural Networks,"A recent trojan attack on deep neural network (DNN) models is one insidious
+variant of data poisoning attacks. Trojan attacks exploit an effective backdoor
+created in a DNN model by leveraging the difficulty in interpretability of the
+learned model to misclassify any inputs signed with the attacker's chosen
+trojan trigger. Since the trojan trigger is a secret guarded and exploited by
+the attacker, detecting such trojan inputs is a challenge, especially at
+run-time when models are in active operation. This work builds STRong
+Intentional Perturbation (STRIP) based run-time trojan attack detection system
+and focuses on vision system. We intentionally perturb the incoming input, for
+instance by superimposing various image patterns, and observe the randomness of
+predicted classes for perturbed inputs from a given deployed model---malicious
+or benign. A low entropy in predicted classes violates the input-dependence
+property of a benign model and implies the presence of a malicious input---a
+characteristic of a trojaned input. The high efficacy of our method is
+validated through case studies on three popular and contrasting datasets:
+MNIST, CIFAR10 and GTSRB. We achieve an overall false acceptance rate (FAR) of
+less than 1%, given a preset false rejection rate (FRR) of 1%, for different
+types of triggers. Using CIFAR10 and GTSRB, we have empirically achieved result
+of 0% for both FRR and FAR. We have also evaluated STRIP robustness against a
+number of trojan attack variants and adaptive attacks."
+BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain,"Deep learning-based techniques have achieved state-of-the-art performance on
+a wide variety of recognition and classification tasks. However, these networks
+are typically computationally expensive to train, requiring weeks of
+computation on many GPUs; as a result, many users outsource the training
+procedure to the cloud or rely on pre-trained models that are then fine-tuned
+for a specific task. In this paper we show that outsourced training introduces
+new security risks: an adversary can create a maliciously trained network (a
+backdoored neural network, or a \emph{BadNet}) that has state-of-the-art
+performance on the user's training and validation samples, but behaves badly on
+specific attacker-chosen inputs. We first explore the properties of BadNets in
+a toy example, by creating a backdoored handwritten digit classifier. Next, we
+demonstrate backdoors in a more realistic scenario by creating a U.S. street
+sign classifier that identifies stop signs as speed limits when a special
+sticker is added to the stop sign; we then show in addition that the backdoor
+in our US street sign detector can persist even if the network is later
+retrained for another task and cause a drop in accuracy of {25}\% on average
+when the backdoor trigger is present. These results demonstrate that backdoors
+in neural networks are both powerful and---because the behavior of neural
+networks is difficult to explicate---stealthy. This work provides motivation
+for further research into techniques for verifying and inspecting neural
+networks, just as we have developed tools for verifying and debugging software."
+Targeted Backdoor Attacks on Deep Learning Systems Using Data Poisoning,"Deep learning models have achieved high performance on many tasks, and thus
+have been applied to many security-critical scenarios. For example, deep
+learning-based face recognition systems have been used to authenticate users to
+access many security-sensitive applications like payment apps. Such usages of
+deep learning systems provide the adversaries with sufficient incentives to
+perform attacks against these systems for their adversarial purposes. In this
+work, we consider a new type of attacks, called backdoor attacks, where the
+attacker's goal is to create a backdoor into a learning-based authentication
+system, so that he can easily circumvent the system by leveraging the backdoor.
+Specifically, the adversary aims at creating backdoor instances, so that the
+victim learning system will be misled to classify the backdoor instances as a
+target label specified by the adversary. In particular, we study backdoor
+poisoning attacks, which achieve backdoor attacks using poisoning strategies.
+Different from all existing work, our studied poisoning strategies can apply
+under a very weak threat model: (1) the adversary has no knowledge of the model
+and the training set used by the victim system; (2) the attacker is allowed to
+inject only a small amount of poisoning samples; (3) the backdoor key is hard
+to notice even by human beings to achieve stealthiness. We conduct evaluation
+to demonstrate that a backdoor adversary can inject only around 50 poisoning
+samples, while achieving an attack success rate of above 90%. We are also the
+first work to show that a data poisoning attack can create physically
+implementable backdoors without touching the training process. Our work
+demonstrates that backdoor poisoning attacks pose real threats to a learning
+system, and thus highlights the importance of further investigation and
+proposing defense strategies against them."
+WeShort: Out-of-distribution Detection With Weak Shortcut structure,"Neural networks have achieved impressive performance for data in the
+distribution which is the same as the training set but can produce an
+overconfident incorrect result for the data these networks have never seen.
+Therefore, it is essential to detect whether inputs come from
+out-of-distribution(OOD) in order to guarantee the safety of neural networks
+deployed in the real world. In this paper, we propose a simple and effective
+post-hoc technique, WeShort, to reduce the overconfidence of neural networks on
+OOD data. Our method is inspired by the observation of the internal residual
+structure, which shows the separation of the OOD and in-distribution (ID) data
+in the shortcut layer. Our method is compatible with different OOD detection
+scores and can generalize well to different architectures of networks. We
+demonstrate our method on various OOD datasets to show its competitive
+performances and provide reasonable hypotheses to explain why our method works.
+On the ImageNet benchmark, Weshort achieves state-of-the-art performance on the
+false positive rate (FPR95) and the area under the receiver operating
+characteristic (AUROC) on the family of post-hoc methods."
+The Effects of Reward Misspecification: Mapping and Mitigating Misaligned Models,"Reward hacking -- where RL agents exploit gaps in misspecified reward
+functions -- has been widely observed, but not yet systematically studied. To
+understand how reward hacking arises, we construct four RL environments with
+misspecified rewards. We investigate reward hacking as a function of agent
+capabilities: model capacity, action space resolution, observation space noise,
+and training time. More capable agents often exploit reward misspecifications,
+achieving higher proxy reward and lower true reward than less capable agents.
+Moreover, we find instances of phase transitions: capability thresholds at
+which the agent's behavior qualitatively shifts, leading to a sharp decrease in
+the true reward. Such phase transitions pose challenges to monitoring the
+safety of ML systems. To address this, we propose an anomaly detection task for
+aberrant policies and offer several baseline detectors."
+BertNet: Harvesting Knowledge Graphs from Pretrained Language Models,"Symbolic knowledge graphs (KGs) have been constructed either by expensive
+human crowdsourcing or with domain-specific complex information extraction
+pipelines. The emerging large pretrained language models (LMs), such as Bert,
+have shown to implicitly encode massive knowledge which can be queried with
+properly designed prompts. However, compared to the explicit KGs, the implict
+knowledge in the black-box LMs is often difficult to access or edit and lacks
+explainability. In this work, we aim at harvesting symbolic KGs from the LMs, a
+new framework for automatic KG construction empowered by the neural LMs'
+flexibility and scalability. Compared to prior works that often rely on large
+human annotated data or existing massive KGs, our approach requires only the
+minimal definition of relations as inputs, and hence is suitable for extracting
+knowledge of rich new relations not available before.The approach automatically
+generates diverse prompts, and performs efficient knowledge search within a
+given LM for consistent and extensive outputs. The harvested knowledge with our
+approach is substantially more accurate than with previous methods, as shown in
+both automatic and human evaluation. As a result, we derive from diverse LMs a
+family of new KGs (e.g., BertNet and RoBERTaNet) that contain a richer set of
+commonsense relations, including complex ones (e.g., ""A is capable of but not
+good at B""), than the human-annotated KGs (e.g., ConceptNet). Besides, the
+resulting KGs also serve as a vehicle to interpret the respective source LMs,
+leading to new insights into the varying knowledge capability of different LMs."
+Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets,"In this paper we propose to study generalization of neural networks on small
+algorithmically generated datasets. In this setting, questions about data
+efficiency, memorization, generalization, and speed of learning can be studied
+in great detail. In some situations we show that neural networks learn through
+a process of ""grokking"" a pattern in the data, improving generalization
+performance from random chance level to perfect generalization, and that this
+improvement in generalization can happen well past the point of overfitting. We
+also study generalization as a function of dataset size and find that smaller
+datasets require increasing amounts of optimization for generalization. We
+argue that these datasets provide a fertile ground for studying a poorly
+understood aspect of deep learning: generalization of overparametrized neural
+networks beyond memorization of the finite training dataset."
+IBP Regularization for Verified Adversarial Robustness via Branch-and-Bound,"Recent works have tried to increase the verifiability of adversarially
+trained networks by running the attacks over domains larger than the original
+perturbations and adding various regularization terms to the objective.
+However, these algorithms either underperform or require complex and expensive
+stage-wise training procedures, hindering their practical applicability. We
+present IBP-R, a novel verified training algorithm that is both simple and
+effective. IBP-R induces network verifiability by coupling adversarial attacks
+on enlarged domains with a regularization term, based on inexpensive interval
+bound propagation, that minimizes the gap between the non-convex verification
+problem and its approximations. By leveraging recent branch-and-bound
+frameworks, we show that IBP-R obtains state-of-the-art verified
+robustness-accuracy trade-offs for small perturbations on CIFAR-10 while
+training significantly faster than relevant previous work. Additionally, we
+present UPB, a novel branching strategy that, relying on a simple heuristic
+based on $\beta$-CROWN, reduces the cost of state-of-the-art branching
+algorithms while yielding splits of comparable quality."
+One-shot Neural Backdoor Erasing via Adversarial Weight Masking,"Recent studies show that despite achieving high accuracy on a number of
+real-world applications, deep neural networks (DNNs) can be backdoored: by
+injecting triggered data samples into the training dataset, the adversary can
+mislead the trained model into classifying any test data to the target class as
+long as the trigger pattern is presented. To nullify such backdoor threats,
+various methods have been proposed. Particularly, a line of research aims to
+purify the potentially compromised model. However, one major limitation of this
+line of work is the requirement to access sufficient original training data:
+the purifying performance is a lot worse when the available training data is
+limited. In this work, we propose Adversarial Weight Masking (AWM), a novel
+method capable of erasing the neural backdoors even in the one-shot setting.
+The key idea behind our method is to formulate this into a min-max optimization
+problem: first, adversarially recover the trigger patterns and then (soft) mask
+the network weights that are sensitive to the recovered patterns. Comprehensive
+evaluations of several benchmark datasets suggest that AWM can largely improve
+the purifying effects over other state-of-the-art methods on various available
+training dataset sizes."
+Defense Against Multi-target Trojan Attacks,"Adversarial attacks on deep learning-based models pose a significant threat
+to the current AI infrastructure. Among them, Trojan attacks are the hardest to
+defend against. In this paper, we first introduce a variation of the Badnet
+kind of attacks that introduces Trojan backdoors to multiple target classes and
+allows triggers to be placed anywhere in the image. The former makes it more
+potent and the latter makes it extremely easy to carry out the attack in the
+physical space. The state-of-the-art Trojan detection methods fail with this
+threat model. To defend against this attack, we first introduce a trigger
+reverse-engineering mechanism that uses multiple images to recover a variety of
+potential triggers. We then propose a detection mechanism by measuring the
+transferability of such recovered triggers. A Trojan trigger will have very
+high transferability i.e. they make other images also go to the same class. We
+study many practical advantages of our attack method and then demonstrate the
+detection performance using a variety of image datasets. The experimental
+results show the superior detection performance of our method over the
+state-of-the-arts."
+BackdoorBench: A Comprehensive Benchmark of Backdoor Learning,"Backdoor learning is an emerging and important topic of studying the
+vulnerability of deep neural networks (DNNs). Many pioneering backdoor attack
+and defense methods are being proposed successively or concurrently, in the
+status of a rapid arms race. However, we find that the evaluations of new
+methods are often unthorough to verify their claims and real performance,
+mainly due to the rapid development, diverse settings, as well as the
+difficulties of implementation and reproducibility. Without thorough
+evaluations and comparisons, it is difficult to track the current progress and
+design the future development roadmap of the literature. To alleviate this
+dilemma, we build a comprehensive benchmark of backdoor learning, called
+BackdoorBench. It consists of an extensible modular based codebase (currently
+including implementations of 8 state-of-the-art (SOTA) attack and 9 SOTA
+defense algorithms), as well as a standardized protocol of a complete backdoor
+learning. We also provide comprehensive evaluations of every pair of 8 attacks
+against 9 defenses, with 5 poisoning ratios, based on 5 models and 4 datasets,
+thus 8,000 pairs of evaluations in total. We further present analysis from
+different perspectives about these 8,000 evaluations, studying the effects of
+attack against defense algorithms, poisoning ratio, model and dataset in
+backdoor learning. All codes and evaluations of BackdoorBench are publicly
+available at \url{"
+Auditing Visualizations: Transparency Methods Struggle to Detect Anomalous Behavior,"Transparency methods such as model visualizations provide information that
+outputs alone might miss, since they describe the internals of neural networks.
+But can we trust that model explanations reflect model behavior? For instance,
+can they diagnose abnormal behavior such as backdoors or shape bias? To
+evaluate model explanations, we define a model as anomalous if it differs from
+a reference set of normal models, and we test whether transparency methods
+assign different explanations to anomalous and normal models. We find that
+while existing methods can detect stark anomalies such as shape bias or
+adversarial training, they struggle to identify more subtle anomalies such as
+models trained on incomplete data. Moreover, they generally fail to distinguish
+the inputs that induce anomalous behavior, e.g. images containing a backdoor
+trigger. These results reveal new blind spots in existing model explanations,
+pointing to the need for further method development."
+Natural Backdoor Datasets,"Extensive literature on backdoor poison attacks has studied attacks and
+defenses for backdoors using ""digital trigger patterns."" In contrast, ""physical
+backdoors"" use physical objects as triggers, have only recently been
+identified, and are qualitatively different enough to resist all defenses
+targeting digital trigger backdoors. Research on physical backdoors is limited
+by access to large datasets containing real images of physical objects
+co-located with targets of classification. Building these datasets is time- and
+labor-intensive. This works seeks to address the challenge of accessibility for
+research on physical backdoor attacks. We hypothesize that there may be
+naturally occurring physically co-located objects already present in popular
+datasets such as ImageNet. Once identified, a careful relabeling of these data
+can transform them into training samples for physical backdoor attacks. We
+propose a method to scalably identify these subsets of potential triggers in
+existing datasets, along with the specific classes they can poison. We call
+these naturally occurring trigger-class subsets natural backdoor datasets. Our
+techniques successfully identify natural backdoors in widely-available
+datasets, and produce models behaviorally equivalent to those trained on
+manually curated datasets. We release our code to allow the research community
+to create their own datasets for research on physical backdoor attacks."
+Emergent Abilities of Large Language Models,"Scaling up language models has been shown to predictably improve performance
+and sample efficiency on a wide range of downstream tasks. This paper instead
+discusses an unpredictable phenomenon that we refer to as emergent abilities of
+large language models. We consider an ability to be emergent if it is not
+present in smaller models but is present in larger models. Thus, emergent
+abilities cannot be predicted simply by extrapolating the performance of
+smaller models. The existence of such emergence implies that additional scaling
+could further expand the range of capabilities of language models."
+Robust Calibration with Multi-domain Temperature Scaling,"Uncertainty quantification is essential for the reliable deployment of
+machine learning models to high-stakes application domains. Uncertainty
+quantification is all the more challenging when training distribution and test
+distribution are different, even the distribution shifts are mild. Despite the
+ubiquity of distribution shifts in real-world applications, existing
+uncertainty quantification approaches mainly study the in-distribution setting
+where the train and test distributions are the same. In this paper, we develop
+a systematic calibration model to handle distribution shifts by leveraging data
+from multiple domains. Our proposed method -- multi-domain temperature scaling
+-- uses the heterogeneity in the domains to improve calibration robustness
+under distribution shift. Through experiments on three benchmark data sets, we
+find our proposed method outperforms existing methods as measured on both
+in-distribution and out-of-distribution test sets."
+Can Backdoor Attacks Survive Time-Varying Models?,"Backdoors are powerful attacks against deep neural networks (DNNs). By
+poisoning training data, attackers can inject hidden rules (backdoors) into
+DNNs, which only activate on inputs containing attack-specific triggers. While
+existing work has studied backdoor attacks on a variety of DNN models, they
+only consider static models, which remain unchanged after initial deployment."
+Understanding Game-Playing Agents with Natural Language Annotations,"We present a new dataset containing 10K human-annotated games of Go and show
+how these natural language annotations can be used as a tool for model
+interpretability. Given a board state and its associated comment, our approach
+uses linear probing to predict mentions of domain-specific terms (e.g., ko,
+atari) from the intermediate state representations of game-playing agents like
+AlphaGo Zero. We find these game concepts are nontrivially encoded in two
+distinct policy networks, one trained via imitation learning and another
+trained via reinforcement learning. Furthermore, mentions of domain-specific
+terms are most easily predicted from the later layers of both models,
+suggesting that these policy networks encode high-level abstractions similar to
+those used in the natural language annotations."
+Natural Language Descriptions of Deep Visual Features,"Some neurons in deep networks specialize in recognizing highly specific
+perceptual, structural, or semantic features of inputs. In computer vision,
+techniques exist for identifying neurons that respond to individual concept
+categories like colors, textures, and object classes. But these techniques are
+limited in scope, labeling only a small subset of neurons and behaviors in any
+network. Is a richer characterization of neuron-level computation possible? We
+introduce a procedure (called MILAN, for mutual-information-guided linguistic
+annotation of neurons) that automatically labels neurons with open-ended,
+compositional, natural language descriptions. Given a neuron, MILAN generates a
+description by searching for a natural language string that maximizes pointwise
+mutual information with the image regions in which the neuron is active. MILAN
+produces fine-grained descriptions that capture categorical, relational, and
+logical structure in learned features. These descriptions obtain high agreement
+with human-generated feature descriptions across a diverse set of model
+architectures and tasks, and can aid in understanding and controlling learned
+models. We highlight three applications of natural language neuron
+descriptions. First, we use MILAN for analysis, characterizing the distribution
+and importance of neurons selective for attribute, category, and relational
+information in vision models. Second, we use MILAN for auditing, surfacing
+neurons sensitive to human faces in datasets designed to obscure them. Finally,
+we use MILAN for editing, improving robustness in an image classifier by
+deleting neurons sensitive to text features spuriously correlated with class
+labels."
+Imperceptible Backdoor Attack: From Input Space to Feature Representation,"Backdoor attacks are rapidly emerging threats to deep neural networks (DNNs).
+In the backdoor attack scenario, attackers usually implant the backdoor into
+the target model by manipulating the training dataset or training process.
+Then, the compromised model behaves normally for benign input yet makes
+mistakes when the pre-defined trigger appears. In this paper, we analyze the
+drawbacks of existing attack approaches and propose a novel imperceptible
+backdoor attack. We treat the trigger pattern as a special kind of noise
+following a multinomial distribution. A U-net-based network is employed to
+generate concrete parameters of multinomial distribution for each benign input.
+This elaborated trigger ensures that our approach is invisible to both humans
+and statistical detection. Besides the design of the trigger, we also consider
+the robustness of our approach against model diagnose-based defences. We force
+the feature representation of malicious input stamped with the trigger to be
+entangled with the benign one. We demonstrate the effectiveness and robustness
+against multiple state-of-the-art defences through extensive datasets and
+networks. Our trigger only modifies less than 1\% pixels of a benign image
+while the modification magnitude is 1. Our source code is available at"
+Teaching Models to Express Their Uncertainty in Words,"We show that a GPT-3 model can learn to express uncertainty about its own
+answers in natural language -- without use of model logits. When given a
+question, the model generates both an answer and a level of confidence (e.g.
+""90% confidence"" or ""high confidence""). These levels map to probabilities that
+are well calibrated. The model also remains moderately calibrated under
+distribution shift, and is sensitive to uncertainty in its own answers, rather
+than imitating human examples. To our knowledge, this is the first time a model
+has been shown to express calibrated uncertainty about its own answers in
+natural language. For testing calibration, we introduce the CalibratedMath
+suite of tasks. We compare the calibration of uncertainty expressed in words
+(""verbalized probability"") to uncertainty extracted from model logits. Both
+kinds of uncertainty are capable of generalizing calibration under distribution
+shift. We also provide evidence that GPT-3's ability to generalize calibration
+depends on pre-trained latent representations that correlate with epistemic
+uncertainty over its answers."
+Missingness Bias in Model Debugging,"Missingness, or the absence of features from an input, is a concept
+fundamental to many model debugging tools. However, in computer vision, pixels
+cannot simply be removed from an image. One thus tends to resort to heuristics
+such as blacking out pixels, which may in turn introduce bias into the
+debugging process. We study such biases and, in particular, show how
+transformer-based architectures can enable a more natural implementation of
+missingness, which side-steps these issues and improves the reliability of
+model debugging in practice. Our code is available at"
+Single-Turn Debate Does Not Help Humans Answer Hard Reading-Comprehension Questions,"Current QA systems can generate reasonable-sounding yet false answers without
+explanation or evidence for the generated answer, which is especially
+problematic when humans cannot readily check the model's answers. This presents
+a challenge for building trust in machine learning systems. We take inspiration
+from real-world situations where difficult questions are answered by
+considering opposing sides (see Irving et al., 2018). For multiple-choice QA
+examples, we build a dataset of single arguments for both a correct and
+incorrect answer option in a debate-style set-up as an initial step in training
+models to produce explanations for two candidate answers. We use long contexts
+-- humans familiar with the context write convincing explanations for
+pre-selected correct and incorrect answers, and we test if those explanations
+allow humans who have not read the full context to more accurately determine
+the correct answer. We do not find that explanations in our set-up improve
+human accuracy, but a baseline condition shows that providing human-selected
+text snippets does improve accuracy. We use these findings to suggest ways of
+improving the debate set up for future data collection efforts."
+A geometric framework for outlier detection in high-dimensional data,"Outlier or anomaly detection is an important task in data analysis. We
+discuss the problem from a geometrical perspective and provide a framework that
+exploits the metric structure of a data set. Our approach rests on the manifold
+assumption, i.e., that the observed, nominally high-dimensional data lie on a
+much lower dimensional manifold and that this intrinsic structure can be
+inferred with manifold learning methods. We show that exploiting this structure
+significantly improves the detection of outlying observations in
+high-dimensional data. We also suggest a novel, mathematically precise, and
+widely applicable distinction between distributional and structural outliers
+based on the geometry and topology of the data manifold that clarifies
+conceptual ambiguities prevalent throughout the literature. Our experiments
+focus on functional data as one class of structured high-dimensional data, but
+the framework we propose is completely general and we include image and graph
+data applications. Our results show that the outlier structure of
+high-dimensional and non-tabular data can be detected and visualized using
+manifold learning methods and quantified using standard outlier scoring methods
+applied to the manifold embedding vectors."
+Exemplary Natural Images Explain CNN Activations Better than State-of-the-Art Feature Visualization,"Feature visualizations such as synthetic maximally activating images are a
+widely used explanation method to better understand the information processing
+of convolutional neural networks (CNNs). At the same time, there are concerns
+that these visualizations might not accurately represent CNNs' inner workings.
+Here, we measure how much extremely activating images help humans to predict
+CNN activations. Using a well-controlled psychophysical paradigm, we compare
+the informativeness of synthetic images by Olah et al. (2017) with a simple
+baseline visualization, namely exemplary natural images that also strongly
+activate a specific feature map. Given either synthetic or natural reference
+images, human participants choose which of two query images leads to strong
+positive activation. The experiments are designed to maximize participants'
+performance, and are the first to probe intermediate instead of final layer
+representations. We find that synthetic images indeed provide helpful
+information about feature map activations ($82\pm4\%$ accuracy; chance would be
+$50\%$). However, natural images - originally intended as a baseline -
+outperform synthetic images by a wide margin ($92\pm2\%$). Additionally,
+participants are faster and more confident for natural images, whereas
+subjective impressions about the interpretability of the feature visualizations
+are mixed. The higher informativeness of natural images holds across most
+layers, for both expert and lay participants as well as for hand- and
+randomly-picked feature visualizations. Even if only a single reference image
+is given, synthetic images provide less information than natural images
+($65\pm5\%$ vs. $73\pm4\%$). In summary, synthetic images from a popular
+feature visualization method are significantly less informative for assessing
+CNN activations than natural images. We argue that visualization methods should
+improve over this baseline."
