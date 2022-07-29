@@ -1,6 +1,6 @@
-with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\non-safety.txt') as f:
+with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\Links\non-safety.txt') as f:
     nonSafetyPapers = f.readlines()
-with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\safety-adjacent.txt') as f:
+with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\Links\safety-adjacent.txt') as f:
     safetyAdjacent = f.readlines()
 
 nonSafetyPapers += safetyAdjacent

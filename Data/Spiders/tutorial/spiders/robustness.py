@@ -1,10 +1,10 @@
-with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\systemic.txt') as f:
-    systemicPapers = f.readlines()
+with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\Links\robustness.txt') as f:
+    robustnessPapers = f.readlines()
 
-urls = systemicPapers
+urls = robustnessPapers
 import scrapy
 class ArxivSpider(scrapy.Spider):
-    name = 'systemicspider'
+    name = 'robustnessspider'
     start_urls = urls
     def clean(self, text):
         text.replace('\n', ' ')
@@ -14,3 +14,4 @@ class ArxivSpider(scrapy.Spider):
         title = response.xpath('//*[@id="abs"]/h1/text()').get()
         abstract = self.clean(response.xpath('//blockquote[@class = "abstract mathjax"]/text()').getall()[1])
         yield {'title': title, 'abstract': abstract}
+

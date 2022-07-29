@@ -1,10 +1,10 @@
-with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\robustness.txt') as f:
-    robustnessPapers = f.readlines()
+with open(r'C:\Users\joshu\GitHub\safety-paper-classifier\Data\Links\monitoring.txt') as f:
+    monitoringPapers = f.readlines()
 
-urls = robustnessPapers
+urls = monitoringPapers
 import scrapy
 class ArxivSpider(scrapy.Spider):
-    name = 'robustnessspider'
+    name = 'monitoringspider'
     start_urls = urls
     def clean(self, text):
         text.replace('\n', ' ')
