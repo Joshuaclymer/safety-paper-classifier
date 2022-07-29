@@ -9,7 +9,9 @@ from sklearn.metrics import accuracy_score
 
 
 propTestData = 0.1
-classes = ['alingment']
+classes = ['alignment', 'monitoring', 'nonSafety', 'robustness', 'systemic']
+for filename in classes:
+    
 docs_train = open('Processed')
 def ngram_classifier (docs_train, y_train, docs_test, ngram_range):
 
