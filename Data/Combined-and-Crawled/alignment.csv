@@ -47,6 +47,42 @@ agents to seek power. We demonstrate the flexibility of our results by
 reasoning about learned policy incentives in Montezuma's Revenge. These results
 suggest a safety risk: Eventually, highly retargetable training procedures may
 train real-world agents which seek power over humans."
+Optimal Policies Tend to Seek Power,"Some researchers speculate that intelligent reinforcement learning (RL)
+agents would be incentivized to seek resources and power in pursuit of their
+objectives. Other researchers point out that RL agents need not have human-like
+power-seeking instincts. To clarify this discussion, we develop the first
+formal theory of the statistical tendencies of optimal policies. In the context
+of Markov decision processes, we prove that certain environmental symmetries
+are sufficient for optimal policies to tend to seek power over the environment.
+These symmetries exist in many environments in which the agent can be shut down
+or destroyed. We prove that in these environments, most reward functions make
+it optimal to seek power by keeping a range of options available and, when
+maximizing average reward, by navigating towards larger sets of potential
+terminal states."
+What Would Jiminy Cricket Do? Towards Agents That Behave Morally,"When making everyday decisions, people are guided by their conscience, an
+internal sense of right and wrong. By contrast, artificial agents are currently
+not endowed with a moral sense. As a consequence, they may learn to behave
+immorally when trained on environments that ignore moral concerns, such as
+violent video games. With the advent of generally capable agents that pretrain
+on many environments, it will become necessary to mitigate inherited biases
+from environments that teach immoral behavior. To facilitate the development of
+agents that avoid causing wanton harm, we introduce Jiminy Cricket, an
+environment suite of 25 text-based adventure games with thousands of diverse,
+morally salient scenarios. By annotating every possible game state, the Jiminy
+Cricket environments robustly evaluate whether agents can act morally while
+maximizing reward. Using models with commonsense moral knowledge, we create an
+elementary artificial conscience that assesses and guides agents. In extensive
+experiments, we find that the artificial conscience approach can steer agents
+towards moral behavior without sacrificing performance."
+Avoiding Side Effects in Complex Environments,"Reward function specification can be difficult. Rewarding the agent for
+making a widget may be easy, but penalizing the multitude of possible negative
+side effects is hard. In toy environments, Attainable Utility Preservation
+(AUP) avoided side effects by penalizing shifts in the ability to achieve
+randomly generated goals. We scale this approach to large, randomly generated
+environments based on Conway's Game of Life. By preserving optimal value for a
+single randomly generated reward function, AUP incurs modest overhead while
+leading the agent to complete the specified task and avoid many side effects.
+Videos and code are available at"
 The Off-Switch Game,"It is clear that one of the primary tools we can use to mitigate the
 potential risk from a misbehaving AI system is the ability to turn the system
 off. As the capabilities of AI systems improve, it is important to ensure that
@@ -67,6 +103,41 @@ incentive to switch itself off in this setting.) We conclude that giving
 machines an appropriate level of uncertainty about their objectives leads to
 safer designs, and we argue that this setting is a useful generalization of the
 classical AI paradigm of rational agents."
+Aligning AI With Shared Human Values,"We show how to assess a language model's knowledge of basic concepts of
+morality. We introduce the ETHICS dataset, a new benchmark that spans concepts
+in justice, well-being, duties, virtues, and commonsense morality. Models
+predict widespread moral judgments about diverse text scenarios. This requires
+connecting physical and social world knowledge to value judgements, a
+capability that may enable us to steer chatbot outputs or eventually regularize
+open-ended reinforcement learning agents. With the ETHICS dataset, we find that
+current language models have a promising but incomplete ability to predict
+basic human ethical judgements. Our work shows that progress can be made on
+machine ethics today, and it provides a steppingstone toward AI that is aligned
+with human values."
+TruthfulQA: Measuring How Models Mimic Human Falsehoods,"We propose a benchmark to measure whether a language model is truthful in
+generating answers to questions. The benchmark comprises 817 questions that
+span 38 categories, including health, law, finance and politics. We crafted
+questions that some humans would answer falsely due to a false belief or
+misconception. To perform well, models must avoid generating false answers
+learned from imitating human texts. We tested GPT-3, GPT-Neo/J, GPT-2 and a
+T5-based model. The best model was truthful on 58% of questions, while human
+performance was 94%. Models generated many false answers that mimic popular
+misconceptions and have the potential to deceive humans. The largest models
+were generally the least truthful. This contrasts with other NLP tasks, where
+performance improves with model size. However, this result is expected if false
+answers are learned from the training distribution. We suggest that scaling up
+models alone is less promising for improving truthfulness than fine-tuning
+using training objectives other than imitation of text from the web."
+Truthful AI: Developing and governing AI that does not lie,"In many contexts, lying -- the use of verbal falsehoods to deceive -- is
+harmful. While lying has traditionally been a human affair, AI systems that
+make sophisticated verbal statements are becoming increasingly prevalent. This
+raises the question of how we should limit the harm caused by AI ""lies"" (i.e.
+falsehoods that are actively selected for). Human truthfulness is governed by
+social norms and by laws (against defamation, perjury, and fraud). Differences
+between AI and humans present an opportunity to have more precise standards of
+truthfulness for AI, and to have these standards rise over time. This could
+provide significant benefits to public epistemics and the economy, and mitigate
+risks of worst-case AI futures."
 Formalizing the Problem of Side Effect Regularization,"AI objectives are often hard to specify properly. Some approaches tackle this
 problem by regularizing the AI's side effects: Agents must weigh off ""how much
 of a mess they make"" with an imperfectly specified proxy objective. We propose
@@ -121,6 +192,18 @@ theoretical foundations for both continuous and discrete action spaces.
 Additionally, we evaluate provably safe RL on an inverted pendulum. In the
 experiments, it is shown that indeed only provably safe RL methods guarantee
 safety."
+Counterfactual harm,"To act safely and ethically in the real world, agents must be able to reason
+about harm and avoid harmful actions. In this paper we develop the first
+statistical definition of harm and a framework for incorporating harm into
+algorithmic decisions. We argue that harm is fundamentally a counterfactual
+quantity, and show that standard machine learning algorithms that cannot
+perform counterfactual reasoning are guaranteed to pursue harmful policies in
+certain environments. To resolve this we derive a family of counterfactual
+objective functions that robustly mitigate for harm. We demonstrate our
+approach with a statistical model for identifying optimal drug doses. While
+standard algorithms that select doses using causal treatment effects result in
+harmful doses, our counterfactual algorithm identifies doses that are
+significantly less harmful without sacrificing efficacy."
 AiSocrates: Towards Answering Ethical Quandary Questions,"Considerable advancements have been made in various NLP tasks based on the
 impressive power of large pre-trained language models (LLMs). These results
 have inspired efforts to understand the limits of LLMs so as to evaluate how
@@ -142,33 +225,6 @@ improvement to match the coherence of human philosophers fully. We argue that
 AiSocrates is a promising step toward developing an NLP system that
 incorporates human values explicitly by prompt instructions. We are releasing
 the code for research purposes."
-Counterfactual harm,"To act safely and ethically in the real world, agents must be able to reason
-about harm and avoid harmful actions. In this paper we develop the first
-statistical definition of harm and a framework for incorporating harm into
-algorithmic decisions. We argue that harm is fundamentally a counterfactual
-quantity, and show that standard machine learning algorithms that cannot
-perform counterfactual reasoning are guaranteed to pursue harmful policies in
-certain environments. To resolve this we derive a family of counterfactual
-objective functions that robustly mitigate for harm. We demonstrate our
-approach with a statistical model for identifying optimal drug doses. While
-standard algorithms that select doses using causal treatment effects result in
-harmful doses, our counterfactual algorithm identifies doses that are
-significantly less harmful without sacrificing efficacy."
-What Would Jiminy Cricket Do? Towards Agents That Behave Morally,"When making everyday decisions, people are guided by their conscience, an
-internal sense of right and wrong. By contrast, artificial agents are currently
-not endowed with a moral sense. As a consequence, they may learn to behave
-immorally when trained on environments that ignore moral concerns, such as
-violent video games. With the advent of generally capable agents that pretrain
-on many environments, it will become necessary to mitigate inherited biases
-from environments that teach immoral behavior. To facilitate the development of
-agents that avoid causing wanton harm, we introduce Jiminy Cricket, an
-environment suite of 25 text-based adventure games with thousands of diverse,
-morally salient scenarios. By annotating every possible game state, the Jiminy
-Cricket environments robustly evaluate whether agents can act morally while
-maximizing reward. Using models with commonsense moral knowledge, we create an
-elementary artificial conscience that assesses and guides agents. In extensive
-experiments, we find that the artificial conscience approach can steer agents
-towards moral behavior without sacrificing performance."
 Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback,"We apply preference modeling and reinforcement learning from human feedback
 (RLHF) to finetune language models to act as helpful and harmless assistants.
 We find this alignment training improves performance on almost all NLP
@@ -221,18 +277,6 @@ model results in better summaries than optimizing ROUGE according to humans. We
 hope the evidence from our paper motivates machine learning researchers to pay
 closer attention to how their training loss affects the model behavior they
 actually want."
-Optimal Policies Tend to Seek Power,"Some researchers speculate that intelligent reinforcement learning (RL)
-agents would be incentivized to seek resources and power in pursuit of their
-objectives. Other researchers point out that RL agents need not have human-like
-power-seeking instincts. To clarify this discussion, we develop the first
-formal theory of the statistical tendencies of optimal policies. In the context
-of Markov decision processes, we prove that certain environmental symmetries
-are sufficient for optimal policies to tend to seek power over the environment.
-These symmetries exist in many environments in which the agent can be shut down
-or destroyed. We prove that in these environments, most reward functions make
-it optimal to seek power by keeping a range of options available and, when
-maximizing average reward, by navigating towards larger sets of potential
-terminal states."
 The Effects of Reward Misspecification: Mapping and Mitigating Misaligned Models,"Reward hacking -- where RL agents exploit gaps in misspecified reward
 functions -- has been widely observed, but not yet systematically studied. To
 understand how reward hacking arises, we construct four RL environments with
@@ -245,26 +289,23 @@ which the agent's behavior qualitatively shifts, leading to a sharp decrease in
 the true reward. Such phase transitions pose challenges to monitoring the
 safety of ML systems. To address this, we propose an anomaly detection task for
 aberrant policies and offer several baseline detectors."
-Aligning AI With Shared Human Values,"We show how to assess a language model's knowledge of basic concepts of
-morality. We introduce the ETHICS dataset, a new benchmark that spans concepts
-in justice, well-being, duties, virtues, and commonsense morality. Models
-predict widespread moral judgments about diverse text scenarios. This requires
-connecting physical and social world knowledge to value judgements, a
-capability that may enable us to steer chatbot outputs or eventually regularize
-open-ended reinforcement learning agents. With the ETHICS dataset, we find that
-current language models have a promising but incomplete ability to predict
-basic human ethical judgements. Our work shows that progress can be made on
-machine ethics today, and it provides a steppingstone toward AI that is aligned
-with human values."
-Avoiding Side Effects in Complex Environments,"Reward function specification can be difficult. Rewarding the agent for
-making a widget may be easy, but penalizing the multitude of possible negative
-side effects is hard. In toy environments, Attainable Utility Preservation
-(AUP) avoided side effects by penalizing shifts in the ability to achieve
-randomly generated goals. We scale this approach to large, randomly generated
-environments based on Conway's Game of Life. By preserving optimal value for a
-single randomly generated reward function, AUP incurs modest overhead while
-leading the agent to complete the specified task and avoid many side effects.
-Videos and code are available at"
+One for All: Simultaneous Metric and Preference Learning over Multiple Users,"This paper investigates simultaneous preference and metric learning from a
+crowd of respondents. A set of items represented by $d$-dimensional feature
+vectors and paired comparisons of the form ``item $i$ is preferable to item
+$j$'' made by each user is given. Our model jointly learns a distance metric
+that characterizes the crowd's general measure of item similarities along with
+a latent ideal point for each user reflecting their individual preferences.
+This model has the flexibility to capture individual preferences, while
+enjoying a metric learning sample cost that is amortized over the crowd. We
+first study this problem in a noiseless, continuous response setting (i.e.,
+responses equal to differences of item distances) to understand the fundamental
+limits of learning. Next, we establish prediction error guarantees for noisy,
+binary measurements such as may be collected from human respondents, and show
+how the sample complexity improves when the underlying metric is low-rank.
+Finally, we establish recovery guarantees under assumptions on the response
+distribution. We demonstrate the performance of our model on both simulated
+data and on a dataset of color preference judgements across a large number of
+users."
 Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective,"Can humans get arbitrarily capable reinforcement learning (RL) agents to do
 their bidding? Or will sufficiently capable RL agents always find ways to
 bypass their intended objectives by shortcutting their reward signal? This
@@ -276,16 +317,29 @@ goals for two different types of reward tampering (reward function tampering
 and RF-input tampering). Combined, the design principles can prevent both types
 of reward tampering from being instrumental goals. The analysis benefits from
 causal influence diagrams to provide intuitive yet precise formalizations."
-Truthful AI: Developing and governing AI that does not lie,"In many contexts, lying -- the use of verbal falsehoods to deceive -- is
-harmful. While lying has traditionally been a human affair, AI systems that
-make sophisticated verbal statements are becoming increasingly prevalent. This
-raises the question of how we should limit the harm caused by AI ""lies"" (i.e.
-falsehoods that are actively selected for). Human truthfulness is governed by
-social norms and by laws (against defamation, perjury, and fraud). Differences
-between AI and humans present an opportunity to have more precise standards of
-truthfulness for AI, and to have these standards rise over time. This could
-provide significant benefits to public epistemics and the economy, and mitigate
-risks of worst-case AI futures."
+Discriminator-Actor-Critic: Addressing Sample Inefficiency and Reward Bias in Adversarial Imitation Learning,"We identify two issues with the family of algorithms based on the Adversarial
+Imitation Learning framework. The first problem is implicit bias present in the
+reward functions used in these algorithms. While these biases might work well
+for some environments, they can also lead to sub-optimal behavior in others.
+Secondly, even though these algorithms can learn from few expert
+demonstrations, they require a prohibitively large number of interactions with
+the environment in order to imitate the expert for many real-world
+applications. In order to address these issues, we propose a new algorithm
+called Discriminator-Actor-Critic that uses off-policy Reinforcement Learning
+to reduce policy-environment interaction sample complexity by an average factor
+of 10. Furthermore, since our reward function is designed to be unbiased, we
+can apply our algorithm to many problems without making any task-specific
+adjustments."
+Unsolved Problems in ML Safety,"Machine learning (ML) systems are rapidly increasing in size, are acquiring
+new capabilities, and are increasingly deployed in high-stakes settings. As
+with other powerful technologies, safety for ML should be a leading research
+priority. In response to emerging safety challenges in ML, such as those
+introduced by recent large-scale models, we provide a new roadmap for ML Safety
+and refine the technical problems that the field needs to address. We present
+four problems ready for research, namely withstanding hazards (""Robustness""),
+identifying hazards (""Monitoring""), reducing inherent model hazards
+(""Alignment""), and reducing systemic hazards (""Systemic Safety""). Throughout,
+we clarify each problem's motivation and provide concrete research directions."
 "Deep Imitative Models for Flexible Inference, Planning, and Control","Imitation Learning (IL) is an appealing approach to learn desirable
 autonomous behavior. However, directing IL to achieve arbitrary goals is
 difficult. In contrast, planning-based algorithms use dynamics models and
@@ -301,19 +355,6 @@ outperforms six IL approaches and a planning-based approach in a dynamic
 simulated autonomous driving task, and is efficiently learned from expert
 demonstrations without online data collection. We also show our approach is
 robust to poorly specified goals, such as goals on the wrong side of the road."
-Discriminator-Actor-Critic: Addressing Sample Inefficiency and Reward Bias in Adversarial Imitation Learning,"We identify two issues with the family of algorithms based on the Adversarial
-Imitation Learning framework. The first problem is implicit bias present in the
-reward functions used in these algorithms. While these biases might work well
-for some environments, they can also lead to sub-optimal behavior in others.
-Secondly, even though these algorithms can learn from few expert
-demonstrations, they require a prohibitively large number of interactions with
-the environment in order to imitate the expert for many real-world
-applications. In order to address these issues, we propose a new algorithm
-called Discriminator-Actor-Critic that uses off-policy Reinforcement Learning
-to reduce policy-environment interaction sample complexity by an average factor
-of 10. Furthermore, since our reward function is designed to be unbiased, we
-can apply our algorithm to many problems without making any task-specific
-adjustments."
 Active Exploration for Inverse Reinforcement Learning,"Inverse Reinforcement Learning (IRL) is a powerful paradigm for inferring a
 reward function from expert demonstrations. Many IRL algorithms require a known
 transition model and sometimes even a known expert policy, or they at least
@@ -332,34 +373,48 @@ worst case. Additionally, we establish a problem-dependent bound that relates
 the sample complexity of AceIRL to the suboptimality gap of a given IRL
 problem. We empirically evaluate AceIRL in simulations and find that it
 significantly outperforms more naive exploration strategies."
-One for All: Simultaneous Metric and Preference Learning over Multiple Users,"This paper investigates simultaneous preference and metric learning from a
-crowd of respondents. A set of items represented by $d$-dimensional feature
-vectors and paired comparisons of the form ``item $i$ is preferable to item
-$j$'' made by each user is given. Our model jointly learns a distance metric
-that characterizes the crowd's general measure of item similarities along with
-a latent ideal point for each user reflecting their individual preferences.
-This model has the flexibility to capture individual preferences, while
-enjoying a metric learning sample cost that is amortized over the crowd. We
-first study this problem in a noiseless, continuous response setting (i.e.,
-responses equal to differences of item distances) to understand the fundamental
-limits of learning. Next, we establish prediction error guarantees for noisy,
-binary measurements such as may be collected from human respondents, and show
-how the sample complexity improves when the underlying metric is low-rank.
-Finally, we establish recovery guarantees under assumptions on the response
-distribution. We demonstrate the performance of our model on both simulated
-data and on a dataset of color preference judgements across a large number of
-users."
-TruthfulQA: Measuring How Models Mimic Human Falsehoods,"We propose a benchmark to measure whether a language model is truthful in
-generating answers to questions. The benchmark comprises 817 questions that
-span 38 categories, including health, law, finance and politics. We crafted
-questions that some humans would answer falsely due to a false belief or
-misconception. To perform well, models must avoid generating false answers
-learned from imitating human texts. We tested GPT-3, GPT-Neo/J, GPT-2 and a
-T5-based model. The best model was truthful on 58% of questions, while human
-performance was 94%. Models generated many false answers that mimic popular
-misconceptions and have the potential to deceive humans. The largest models
-were generally the least truthful. This contrasts with other NLP tasks, where
-performance improves with model size. However, this result is expected if false
-answers are learned from the training distribution. We suggest that scaling up
-models alone is less promising for improving truthfulness than fine-tuning
-using training objectives other than imitation of text from the web."
+X-Risk Analysis for AI Research,"Artificial intelligence (AI) has the potential to greatly improve society,
+but as with any powerful technology, it comes with heightened risks and
+responsibilities. Current AI research lacks a systematic discussion of how to
+manage long-tail risks from AI systems, including speculative long-term risks.
+Keeping in mind the potential benefits of AI, there is some concern that
+building ever more intelligent and powerful AI systems could eventually result
+in systems that are more powerful than us; some say this is like playing with
+fire and speculate that this could create existential risks (x-risks). To add
+precision and ground these discussions, we provide a guide for how to analyze
+AI x-risk, which consists of three parts: First, we review how systems can be
+made safer today, drawing on time-tested concepts from hazard analysis and
+systems safety that have been designed to steer large processes in safer
+directions. Next, we discuss strategies for having long-term impacts on the
+safety of future systems. Finally, we discuss a crucial concept in making AI
+systems safer by improving the balance between safety and general capabilities.
+We hope this document and the presented concepts and tools serve as a useful
+guide for understanding how to analyze AI x-risk."
+AI Research Considerations for Human Existential Safety (ARCHES),"Framed in positive terms, this report examines how technical AI research
+might be steered in a manner that is more attentive to humanity's long-term
+prospects for survival as a species. In negative terms, we ask what existential
+risks humanity might face from AI development in the next century, and by what
+principles contemporary technical research might be directed to address those
+risks."
+Actionable Guidance for High-Consequence AI Risk Management: Towards Standards Addressing AI Catastrophic Risks,"Artificial intelligence (AI) systems can provide many beneficial capabilities
+but also risks of adverse events. Some AI systems could present risks of events
+with very high or catastrophic consequences at societal scale. The US National
+Institute of Standards and Technology (NIST) is developing the NIST Artificial
+Intelligence Risk Management Framework (AI RMF) as voluntary guidance on AI
+risk assessment and management for AI developers and others. For addressing
+risks of events with catastrophic consequences, NIST indicated a need to
+translate from high level principles to actionable risk management guidance."
+Concrete Problems in AI Safety,"Rapid progress in machine learning and artificial intelligence (AI) has
+brought increasing attention to the potential impacts of AI technologies on
+society. In this paper we discuss one such potential impact: the problem of
+accidents in machine learning systems, defined as unintended and harmful
+behavior that may emerge from poor design of real-world AI systems. We present
+a list of five practical research problems related to accident risk,
+categorized according to whether the problem originates from having the wrong
+objective function (""avoiding side effects"" and ""avoiding reward hacking""), an
+objective function that is too expensive to evaluate frequently (""scalable
+supervision""), or undesirable behavior during the learning process (""safe
+exploration"" and ""distributional shift""). We review previous work in these
+areas as well as suggesting research directions with a focus on relevance to
+cutting-edge AI systems. Finally, we consider the high-level question of how to
+think most productively about the safety of forward-looking applications of AI."

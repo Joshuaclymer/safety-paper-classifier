@@ -1,0 +1,238 @@
+title,abstract
+Forecasting Future World Events with Neural Networks,"Forecasting future world events is a challenging but valuable task. Forecasts
+of climate, geopolitical conflict, pandemics and economic indicators help shape
+policy and decision making. In these domains, the judgment of expert humans
+contributes to the best forecasts. Given advances in language modeling, can
+these forecasts be automated? To this end, we introduce Autocast, a dataset
+containing thousands of forecasting questions and an accompanying news corpus.
+Questions are taken from forecasting tournaments, ensuring high quality,
+real-world importance, and diversity. The news corpus is organized by date,
+allowing us to precisely simulate the conditions under which humans made past
+forecasts (avoiding leakage from the future). Motivated by the difficulty of
+forecasting numbers across orders of magnitude (e.g. global cases of COVID-19
+in 2022), we also curate IntervalQA, a dataset of numerical questions and
+metrics for calibration. We test language models on our forecasting task and
+find that performance is far below a human expert baseline. However,
+performance improves with increased model size and incorporation of relevant
+information from the news corpus. In sum, Autocast poses a novel challenge for
+large language models and improved performance could bring large practical
+benefits."
+Generalized Beliefs for Cooperative AI,"Self-play is a common paradigm for constructing solutions in Markov games
+that can yield optimal policies in collaborative settings. However, these
+policies often adopt highly-specialized conventions that make playing with a
+novel partner difficult. To address this, recent approaches rely on encoding
+symmetry and convention-awareness into policy training, but these require
+strong environmental assumptions and can complicate policy training. We
+therefore propose moving the learning of conventions to the belief space.
+Specifically, we propose a belief learning model that can maintain beliefs over
+rollouts of policies not seen at training time, and can thus decode and adapt
+to novel conventions at test time. We show how to leverage this model for both
+search and training of a best response over various pools of policies to
+greatly improve ad-hoc teamplay. We also show how our setup promotes
+explainability and interpretability of nuanced agent conventions."
+AnoShift: A Distribution Shift Benchmark for Unsupervised Anomaly Detection,"Analyzing the distribution shift of data is a growing research direction in
+nowadays Machine Learning, leading to emerging new benchmarks that focus on
+providing a suitable scenario for studying the generalization properties of ML
+models. The existing benchmarks are focused on supervised learning, and to the
+best of our knowledge, there is none for unsupervised learning. Therefore, we
+introduce an unsupervised anomaly detection benchmark with data that shifts
+over time, built over Kyoto-2006+, a traffic dataset for network intrusion
+detection. This kind of data meets the premise of shifting the input
+distribution: it covers a large time span ($10$ years), with naturally
+occurring changes over time (\eg users modifying their behavior patterns, and
+software updates). We first highlight the non-stationary nature of the data,
+using a basic per-feature analysis, t-SNE, and an Optimal Transport approach
+for measuring the overall distribution distances between years. Next, we
+propose AnoShift, a protocol splitting the data in IID, NEAR, and FAR testing
+splits. We validate the performance degradation over time with diverse models
+(MLM to classical Isolation Forest). Finally, we show that by acknowledging the
+distribution shift problem and properly addressing it, the performance can be
+improved compared to the classical IID training (by up to $3\%$, on average).
+Dataset and code are available at"
+Anomal-E: A Self-Supervised Network Intrusion Detection System based on Graph Neural Networks,"This paper investigates Graph Neural Networks (GNNs) application for
+self-supervised network intrusion and anomaly detection. GNNs are a deep
+learning approach for graph-based data that incorporate graph structures into
+learning to generalise graph representations and output embeddings. As network
+flows are naturally graph-based, GNNs are a suitable fit for analysing and
+learning network behaviour. The majority of current implementations of
+GNN-based Network Intrusion Detection Systems (NIDSs) rely heavily on labelled
+network traffic which can not only restrict the amount and structure of input
+traffic, but also the NIDSs potential to adapt to unseen attacks. To overcome
+these restrictions, we present Anomal-E, a GNN approach to intrusion and
+anomaly detection that leverages edge features and graph topological structure
+in a self-supervised process. This approach is, to the best our knowledge, the
+first successful and practical approach to network intrusion detection that
+utilises network flows in a self-supervised, edge leveraging GNN. Experimental
+results on two modern benchmark NIDS datasets not only clearly display the
+improvement of using Anomal-E embeddings rather than raw features, but also the
+potential Anomal-E has for detection on wild network traffic."
+Open Problems in Cooperative AI,"Problems of cooperation--in which agents seek ways to jointly improve their
+welfare--are ubiquitous and important. They can be found at scales ranging from
+our daily routines--such as driving on highways, scheduling meetings, and
+working collaboratively--to our global challenges--such as peace, commerce, and
+pandemic preparedness. Arguably, the success of the human species is rooted in
+our ability to cooperate. Since machines powered by artificial intelligence are
+playing an ever greater role in our lives, it will be important to equip them
+with the capabilities necessary to cooperate and to foster cooperation."
+Forecasting Future World Events with Neural Networks,"Forecasting future world events is a challenging but valuable task. Forecasts
+of climate, geopolitical conflict, pandemics and economic indicators help shape
+policy and decision making. In these domains, the judgment of expert humans
+contributes to the best forecasts. Given advances in language modeling, can
+these forecasts be automated? To this end, we introduce Autocast, a dataset
+containing thousands of forecasting questions and an accompanying news corpus.
+Questions are taken from forecasting tournaments, ensuring high quality,
+real-world importance, and diversity. The news corpus is organized by date,
+allowing us to precisely simulate the conditions under which humans made past
+forecasts (avoiding leakage from the future). Motivated by the difficulty of
+forecasting numbers across orders of magnitude (e.g. global cases of COVID-19
+in 2022), we also curate IntervalQA, a dataset of numerical questions and
+metrics for calibration. We test language models on our forecasting task and
+find that performance is far below a human expert baseline. However,
+performance improves with increased model size and incorporation of relevant
+information from the news corpus. In sum, Autocast poses a novel challenge for
+large language models and improved performance could bring large practical
+benefits."
+On Single Point Forecasts for Fat-Tailed Variables,"We discuss common errors and fallacies when using naive ""evidence based""
+empiricism and point forecasts for fat-tailed variables, as well as the
+insufficiency of using naive first-order scientific methods for tail risk
+management. We use the COVID-19 pandemic as the background for the discussion
+and as an example of a phenomenon characterized by a multiplicative nature, and
+what mitigating policies must result from the statistical properties and
+associated risks. In doing so, we also respond to the points raised by
+Ioannidis et al. (2020)."
+Robustness Evaluation of Deep Unsupervised Learning Algorithms for Intrusion Detection Systems,"Recently, advances in deep learning have been observed in various fields,
+including computer vision, natural language processing, and cybersecurity.
+Machine learning (ML) has demonstrated its ability as a potential tool for
+anomaly detection-based intrusion detection systems to build secure computer
+networks. Increasingly, ML approaches are widely adopted than heuristic
+approaches for cybersecurity because they learn directly from data. Data is
+critical for the development of ML systems, and becomes potential targets for
+attackers. Basically, data poisoning or contamination is one of the most common
+techniques used to fool ML models through data. This paper evaluates the
+robustness of six recent deep learning algorithms for intrusion detection on
+contaminated data. Our experiments suggest that the state-of-the-art algorithms
+used in this study are sensitive to data contamination and reveal the
+importance of self-defense against data perturbation when developing novel
+models, especially for intrusion detection systems."
+Asleep at the Keyboard? Assessing the Security of GitHub Copilot's Code Contributions,"There is burgeoning interest in designing AI-based systems to assist humans
+in designing computing systems, including tools that automatically generate
+computer code. The most notable of these comes in the form of the first
+self-described `AI pair programmer', GitHub Copilot, a language model trained
+over open-source GitHub code. However, code often contains bugs - and so, given
+the vast quantity of unvetted code that Copilot has processed, it is certain
+that the language model will have learned from exploitable, buggy code. This
+raises concerns on the security of Copilot's code contributions. In this work,
+we systematically investigate the prevalence and conditions that can cause
+GitHub Copilot to recommend insecure code. To perform this analysis we prompt
+Copilot to generate code in scenarios relevant to high-risk CWEs (e.g. those
+from MITRE's ""Top 25"" list). We explore Copilot's performance on three distinct
+code generation axes -- examining how it performs given diversity of
+weaknesses, diversity of prompts, and diversity of domains. In total, we
+produce 89 different scenarios for Copilot to complete, producing 1,689
+programs. Of these, we found approximately 40% to be vulnerable."
+Developing Optimal Causal Cyber-Defence Agents via Cyber Security Simulation,"In this paper we explore cyber security defence, through the unification of a
+novel cyber security simulator with models for (causal) decision-making through
+optimisation. Particular attention is paid to a recently published approach:
+dynamic causal Bayesian optimisation (DCBO). We propose that DCBO can act as a
+blue agent when provided with a view of a simulated network and a causal model
+of how a red agent spreads within that network. To investigate how DCBO can
+perform optimal interventions on host nodes, in order to reduce the cost of
+intrusions caused by the red agent. Through this we demonstrate a complete
+cyber-simulation system, which we use to generate observational data for DCBO
+and provide numerical quantitative results which lay the foundations for future
+work in this space."
+Deep Reinforcement Learning for Cyber Security,"The scale of Internet-connected systems has increased considerably, and these
+systems are being exposed to cyber attacks more than ever. The complexity and
+dynamics of cyber attacks require protecting mechanisms to be responsive,
+adaptive, and scalable. Machine learning, or more specifically deep
+reinforcement learning (DRL), methods have been proposed widely to address
+these issues. By incorporating deep learning into traditional RL, DRL is highly
+capable of solving complex, dynamic, and especially high-dimensional cyber
+defense problems. This paper presents a survey of DRL approaches developed for
+cyber security. We touch on different vital aspects, including DRL-based
+security methods for cyber-physical systems, autonomous intrusion detection
+techniques, and multiagent DRL-based game theory simulations for defense
+strategies against cyber attacks. Extensive discussions and future research
+directions on DRL-based cyber security are also given. We expect that this
+comprehensive review provides the foundations for and facilitates future
+studies on exploring the potential of emerging DRL to cope with increasingly
+complex cyber security problems."
+Review: Deep Learning Methods for Cybersecurity and Intrusion Detection Systems,"As the number of cyber-attacks is increasing, cybersecurity is evolving to a
+key concern for any business. Artificial Intelligence (AI) and Machine Learning
+(ML) (in particular Deep Learning - DL) can be leveraged as key enabling
+technologies for cyber-defense, since they can contribute in threat detection
+and can even provide recommended actions to cyber analysts. A partnership of
+industry, academia, and government on a global scale is necessary in order to
+advance the adoption of AI/ML to cybersecurity and create efficient cyber
+defense systems. In this paper, we are concerned with the investigation of the
+various deep learning techniques employed for network intrusion detection and
+we introduce a DL framework for cybersecurity applications."
+Machine Learning Based Cyber Attacks Targeting on Controlled Information: A Survey,"Stealing attack against controlled information, along with the increasing
+number of information leakage incidents, has become an emerging cyber security
+threat in recent years. Due to the booming development and deployment of
+advanced analytics solutions, novel stealing attacks utilize machine learning
+(ML) algorithms to achieve high success rate and cause a lot of damage.
+Detecting and defending against such attacks is challenging and urgent so that
+governments, organizations, and individuals should attach great importance to
+the ML-based stealing attacks. This survey presents the recent advances in this
+new type of attack and corresponding countermeasures. The ML-based stealing
+attack is reviewed in perspectives of three categories of targeted controlled
+information, including controlled user activities, controlled ML model-related
+information, and controlled authentication information. Recent publications are
+summarized to generalize an overarching attack methodology and to derive the
+limitations and future directions of ML-based stealing attacks. Furthermore,
+countermeasures are proposed towards developing effective protections from
+three aspects -- detection, disruption, and isolation."
+HierarchicalForecast: A Reference Framework for Hierarchical Forecasting in Python,"Large collections of time series data are commonly organized into
+cross-sectional structures with different levels of aggregation; examples
+include product and geographical groupings. A necessary condition for coherent
+decision-making and planning, with such datasets, is for the dis-aggregated
+series' forecasts to add up exactly to the aggregated series forecasts, which
+motivates the creation of novel hierarchical forecasting algorithms. The
+growing interest of the Machine Learning community in cross-sectional
+hierarchical forecasting systems states that we are in a propitious moment to
+ensure that scientific endeavors are grounded on sound baselines. For this
+reason, we put forward the HierarchicalForecast library, which contains
+preprocessed publicly available datasets, evaluation metrics, and a compiled
+set of statistical baseline models. Our Python-based framework aims to bridge
+the gap between statistical, econometric modeling, and Machine Learning
+forecasting research. Code and documentation are available in"
+Forecasting: theory and practice,"Forecasting has always been at the forefront of decision making and planning.
+The uncertainty that surrounds the future is both exciting and challenging,
+with individuals and organisations seeking to minimise risks and maximise
+utilities. The large number of forecasting applications calls for a diverse set
+of forecasting methods to tackle real-life challenges. This article provides a
+non-systematic review of the theory and the practice of forecasting. We provide
+an overview of a wide range of theoretical, state-of-the-art models, methods,
+principles, and approaches to prepare, produce, organise, and evaluate
+forecasts. We then demonstrate how such theoretical concepts are applied in a
+variety of real-life contexts."
+NeuralProphet: Explainable Forecasting at Scale,"We introduce NeuralProphet, a successor to Facebook Prophet, which set an
+industry standard for explainable, scalable, and user-friendly forecasting
+frameworks. With the proliferation of time series data, explainable forecasting
+remains a challenging task for business and operational decision making. Hybrid
+solutions are needed to bridge the gap between interpretable classical methods
+and scalable deep learning models. We view Prophet as a precursor to such a
+solution. However, Prophet lacks local context, which is essential for
+forecasting the near-term future and is challenging to extend due to its Stan
+backend."
+"Machine Learning in Cyber-Security - Problems, Challenges and Data Sets","We present cyber-security problems of high importance. We show that in order
+to solve these cyber-security problems, one must cope with certain machine
+learning challenges. We provide novel data sets representing the problems in
+order to enable the academic community to investigate the problems and suggest
+methods to cope with the challenges. We also present a method to generate
+labels via pivoting, providing a solution to common problems of lack of labels
+in cyber-security."
+Intrusion Detection: Machine Learning Baseline Calculations for Image Classification,"Cyber security can be enhanced through application of machine learning by
+recasting network attack data into an image format, then applying supervised
+computer vision and other machine learning techniques to detect malicious
+specimens. Exploratory data analysis reveals little correlation and few
+distinguishing characteristics between the ten classes of malware used in this
+study. A general model comparison demonstrates that the most promising
+candidates for consideration are Light Gradient Boosting Machine, Random Forest
+Classifier, and Extra Trees Classifier. Convolutional networks fail to deliver
+their outstanding classification ability, being surpassed by a simple, fully
+connected architecture. Most tests fail to break 80% categorical accuracy and
+present low F1 scores, indicating more sophisticated approaches (e.g.,
+bootstrapping, random samples, and feature selection) may be required to
+maximize performance."
