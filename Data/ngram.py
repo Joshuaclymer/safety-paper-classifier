@@ -6,14 +6,15 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import accuracy_score
+import pandas as pd
 
-
-propTestData = 0.1
-classes = ['alignment', 'monitoring', 'nonSafety', 'robustness', 'systemic']
-for filename in classes:
-    
-docs_train = open('Processed')
-def ngram_classifier (docs_train, y_train, docs_test, ngram_range):
+train = pd.read_csv('Processed/train.csv')
+test = pd.read_csv('Processed/test.csv')
+trainX = train['text'].to_numpy()
+trainY = train['label'].to_numpy()
+testX = test['text'].to_numpy()
+testY = test['label'].to_numpy()
+def ngram_classifier (docs_train, y_train, docs_test, ngram_range, ):
 
     tfidfvec = TfidfVectorizer(stop_words = "english",
                                 analyzer = 'word',
@@ -33,3 +34,7 @@ def ngram_classifier (docs_train, y_train, docs_test, ngram_range):
     prediction = clf.predict(X_test)
     
     return prediction
+
+
+print(accuracy_score(ngram_classifier(trainX, trainY, testX, (1,1)), testY))
+# Ngram accuracy is 78% 
