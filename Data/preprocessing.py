@@ -3,7 +3,7 @@ import re
 import random
 from sklearn.model_selection import train_test_split
 
-PROPORTION_TEST = 0.1
+PROPORTION_TEST = 0.25
 def clean(strs):
     strs = re.sub(r'<.*?>', '', strs)
     strs = re.sub(r'[^a-zA-Z. ]', '', strs)

@@ -5,11 +5,11 @@ from tqdm import tqdm
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, confusion_matrix
 import pandas as pd
 
-train = pd.read_csv('Processed/train.csv')
-test = pd.read_csv('Processed/test.csv')
+train = pd.read_csv('Data/Processed/train.csv')
+test = pd.read_csv('Data/Processed/test.csv')
 trainX = train['text'].to_numpy()
 trainY = train['label'].to_numpy()
 testX = test['text'].to_numpy()
@@ -35,6 +35,9 @@ def ngram_classifier (docs_train, y_train, docs_test, ngram_range, ):
     
     return prediction
 
-
-print(accuracy_score(ngram_classifier(trainX, trainY, testX, (1,1)), testY))
+predY =ngram_classifier(trainX, trainY, testX, (1,1))
+print(accuracy_score(predY, testY))
 # Ngram accuracy is 78% 
+
+print(confusion_matrix(predY, testY, labels=None, sample_weight=None, normalize=None))
+
